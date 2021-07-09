@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>mui-player 直播模式</title>
+        <link rel="stylesheet" href="../release/mui-player/dist/mui-player.min.css">
+        <script src="./static/js/config.js"></script>
+        <script src="../release/mui-player/dist/mui-player.min.js"></script>
+    </head>
+    
+	<body>
+        <h3 style="text-align: center;">直播模式</h3>
+        <div id="mui-player" style="max-width: 700px;margin: auto"></div>
+    </body>
+    
+    <script>
+        var config = window.playerConfig;
+        config.live = true;
+        
+        console.log(config);
+        var mp = new MuiPlayer(config);
+    </script>
+</html>

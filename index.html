@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>(Main)一款精美小巧的手机端H5视频播放器</title>
+	</head>
+	<style type="text/css">
+		body { margin: 0; }
+		#interfaceDemo button {margin-right: 8px;margin-bottom: 12px;-webkit-appearance: button;color: #fff;background: #1890ff;text-shadow: 0 -1px 0 rgba(0,0,0,.12);-webkit-box-shadow: 0 2px 0 rgba(0,0,0,.045);box-shadow: 0 2px 0 rgba(0,0,0,.045);outline: 0;line-height: 1.5715;position: relative;display: inline-block;font-weight: 400;white-space: nowrap;text-align: center;touch-action: manipulation;height: 32px;padding: 4px 15px;font-size: 14px;border-radius: 2px;border: none;cursor: pointer;user-select: none;}
+		#interfaceDemo button:active {opacity: 0.8;}
+	</style>
+	
+	<body>
+		<!-- 指定Mplayer容器，并且绑定属性id初始化是使用 -->
+		<div id="mui-player" style="">
+			<!-- 自定义头部导航 -->
+			<template slot="likeButton">
+				<svg t="1607603509184" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2765"><path d="M333.90592 437.4016H174.7968v-187.5968H40.50944v524.288H174.7968v-219.648h159.10912v219.648h134.28736v-524.288H333.90592v187.5968z m639.90784-22.4256a235.24352 235.24352 0 0 0-37.60128-85.1968 179.05664 179.05664 0 0 0-91.98592-68.5056 275.69152 275.69152 0 0 0-80.896-11.4688H534.84544v524.288h229.84704c77.9776 0 139.776-34.5088 177.2544-99.84 28.01664-48.3328 41.6256-106.8032 41.59488-174.2848a397.4144 397.4144 0 0 0-9.728-84.992z m-141.4656 179.8144a100.57728 100.57728 0 0 1-34.12992 46.6944 87.808 87.808 0 0 1-52.56192 14.9504h-78.848v-288.9728h78.848a134.30784 134.30784 0 0 1 52.224 8.704 56.32 56.32 0 0 1 27.70944 23.552c13.55776 22.9376 21.41184 58.7776 21.36064 107.2128a236.75904 236.75904 0 0 1-14.60224 87.8592z" p-id="2766" fill="#ffffff"></path></svg>
+			</template>
+
+			<template slot="castScreen">
+				<svg t="1607603924213" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2486"><path d="M831.70181844 795.63636406h-151.33090969a32.72727281 32.72727281 0 0 1 0-65.45454562h151.33090969A51.27272719 51.27272719 0 0 0 882.90909125 678.97454562V279.57090875A51.27272719 51.27272719 0 0 0 831.70181844 228.36363594H192.27636406A51.25090875 51.25090875 0 0 0 141.09090875 279.57090875v399.40363688A51.25090875 51.25090875 0 0 0 192.27636406 730.18181844h132.52363594a32.72727281 32.72727281 0 0 1 0 65.45454562H192.27636406A116.77090875 116.77090875 0 0 1 75.63636406 678.97454562V279.57090875A116.77090875 116.77090875 0 0 1 192.27636406 162.90909125h639.42545438A116.79272719 116.79272719 0 0 1 948.36363594 279.57090875v399.40363688A116.79272719 116.79272719 0 0 1 831.70181844 795.63636406zM664.72727281 882.90909125H359.27272719l152.72727281-196.36363687 152.72727281 196.36363687z" fill="#ffffff" p-id="2487"></path></svg>
+			</template>
+			
+			<!-- 自定义底部导航 -->
+			<template slot="nextMedia">
+				<svg t="1584686776454" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1682"><path d="M783.14692466 563.21664097L240.85307534 879.55472126c-39.1656664 24.10194914-90.38230866-6.02548665-90.38230865-51.21664226v-632.676158c0-45.19115433 51.21664097-75.31859011 90.38230865-51.21664226l542.29384932 316.33808029c39.1656664 21.08920518 39.1656664 81.34407804 0 102.43328194z" p-id="1683" fill="#ffffff"></path><path d="M873.52923331 734.94302767c0 42.17841036-39.1656664 78.33133408-90.38230865 78.33133407s-90.38230866-36.15292371-90.38230735-78.33133407V289.05697233c0-42.17841036 39.1656664-78.33133408 90.38230735-78.33133407s90.38230866 36.15292371 90.38230865 78.33133407v445.88605534z" p-id="1684" fill="#ffffff"></path></svg>
+			</template>
+			
+			<template slot="toggleleProgram">
+				<div style="color: white;vertical-align: middle;white-space: nowrap;">选集</div>
+			</template>
+			
+			<!-- 自定义弹出右侧栏窗口 -->
+			<template slot="HD">
+				<div style="color: white;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100%;">
+					<p type="toggleHD" style="cursor: pointer">蓝光1080P</p>
+					<p type="toggleHD" style="cursor: pointer">超清</p>
+					<p type="toggleHD" style="cursor: pointer">高清</p>
+					<p type="toggleHD" style="cursor: pointer">标清</p>
+				</div>
+			</template>
+		</div>
+
+		<div id="interfaceDemo" style="margin: 50px 25px;line-height: 40px;">
+			<!-- 获取 video 元素 -->
+			<button type="button" id="mpVideo">mp.video</button>
+
+			<!-- 动态切换 隐藏/显示 播放器操作控件 -->
+			<button type="button" id="mpToggleControls">mp.toggleControls</button>
+
+			<!-- 显示消息提示框 -->
+			<button type="button" id="mpShowToast">mp.showToast</button>
+
+			<!-- 指定一个视频地址重新加载视频资源，不传参则默认刷新播放器 -->
+			<button type="button" id="mpReloadUrl">mp.reloadUrl</button>
+
+			<!-- 显示视频缓冲Loading -->
+			<button type="button" id="mpShowLoading">mp.showLoading</button>
+
+			<!-- 隐藏视频缓冲Loading -->
+			<button type="button" id="mpHideLoading">mp.hideLoading</button>
+			
+			<!-- 开启全屏播放 -->
+			<button type="button" id="mpOpenFullScreen">mp.openFullScreen</button>
+
+			<!-- 销毁视频播放器 -->
+			<button type="button" id="mpDestory">mp.destory</button>
+
+			<!-- 获取所有视频内控件 -->
+			<button type="button" id="mpGetControlsRemove">mp.getControls.remove</button>
+
+			<button type="button" id="playerTest">mp.playerTest</button>
+		</div>
+	</body>
+</html>

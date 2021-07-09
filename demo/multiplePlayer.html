@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>mui-player 创建多个播放器</title>
+        <link rel="stylesheet" href="../release/mui-player/dist/mui-player.min.css">
+        <script src="./static/js/config.js"></script>
+        <script src="../release/mui-player/dist/mui-player.min.js"></script>
+    </head>
+    
+	<body>
+        <h3 style="text-align: center;">创建多个播放器</h3>
+        <div id="mui-player" style="width: 550px;display: inline-block;"></div> 
+
+        <div id="mui-player-2" style="width: 550px;display: inline-block;"></div>
+    </body>
+    
+    <script>
+        var config_1 = Object.assign({ autoplay:true },window.playerConfig);
+        new MuiPlayer(config_1);
+
+        var config_2 = Object.assign({ autoplay:true },window.playerConfig);
+        config_2.container = '#mui-player-2';
+        config_2.themeColor = '#55c612';
+        config_2.src = 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/subtitleSource.mp4';
+        config_2.poster = 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/subtitle_poster.jpg';
+        new MuiPlayer(config_2);
+    </script>
+</html>

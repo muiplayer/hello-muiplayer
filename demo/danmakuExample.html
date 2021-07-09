@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>Danmaku Example</title>
+        <link rel="stylesheet" href="../release/mui-player/dist/mui-player.min.css">
+        <script src="./static/js/config.js"></script>
+        <script src="../release/mui-player/dist/mui-player.min.js"></script>
+
+        <link rel="stylesheet" href="./static/css/CommentCoreLibrary.min.css">
+        <script src="./static/js/CommentCoreLibrary.min.js"></script>
+        <script src="./static/js/comments.js"></script>
+    </head>
+    
+	<body>
+        <h3 style="text-align: center;">Danmaku Example</h3>
+        <div id="mui-player" class='abp' style="background-color: black;">
+            <div id='my-comment-stage' class='container' style="z-index: 1 !important;height: 325px;width: 100%;"></div>
+        </div><br/>
+
+        <button onclick="$danmaku.cmSend()">触发 - Send</button>
+        <button onclick="$danmaku.cmClear()">触发 - Clear</button>
+
+        <button onclick="$danmaku.cmInsert()">在10秒处插入一条弹幕 - Insert</button>
+        <button onclick="$danmaku.cmSend()">立即发送一条弹幕 - Send</button>
+    </body>
+    
+    <script>
+        var $danmaku = {
+            CM:null,
+            /**
+             * 初始化创建 CCL 实例
+             */
+            initCreateDanmaku:function() {
+                var danmakuContainer = document.getElementById('my-comment-stage');
+                this.CM = new CommentManager(danmakuContainer);
+
+                this.CM.init();
+                this.loadDanmakuData();
+            },
+            /**
+             * 挂载 CCL 弹幕数据列表
+             */
+            loadDanmakuData:function() {
+                this.CM.load(window.danmakuList);
+                window.CM = this.CM // 开放 CM 对象到全局这样就可以在 console 终端里操控
+                console.log(window.CM)
+            },
+            /**
+             * 视频播放器容器大小变化，控制弹幕窗口同步拉伸
+             */
+            autoscaleComment:function() {
+                var stage = this.CM.stage;
+                var mpContainer = document.getElementById("mui-player");
+
+                if(this._timeout_1) { clearTimeout(this._timeout_1) };
+                this._timeout_1 = setTimeout(function() {
+                    stage.style.height = (mpContainer.clientHeight - 80) + 'px';
+                    this.CM.init(); // 重新初始化弹幕管理器并绑定舞台大小
+                },500)
+            },
+            cmSend:function() {
+                this.CM.send({
+                    mode:1,
+                    text:'Send Danmaku...',
+                    size:25,
+                });
+            },
+            cmClear:function() {
+                this.CM.clear();
+            },
+            cmInsert:function() {
+                this.CM.insert({
+                    mode:1,
+                    text:'Insert Danmaku',
+                    stime:10000,
+                    size:25,
+                    color:0x0000FF
+                })
+            },
+        }
+
+        var $player = {
+            mp:null,
+            _disableTime:true,
+            playTime:0,
+            /**
+             * 初始化创建 MuiPlayer 实例
+             */
+            initCreateMuiplayer:function() {
+                var config = window.playerConfig;
+                config['autoplay'] = true;
+                this.mp = new MuiPlayer(config);
+                this.addPlayListener();
+                
+            },
+            /**
+             * 添加播放事件监听
+             */
+            addPlayListener:function() {
+                let _this = this;
+                _this.mp.on('ready',function(e) {
+                    _this.mp.video().addEventListener('play',function() {
+                        _this.playTime = _this.mp.video().currentTime * 1000;
+                        _this._disableTime = true;
+                        $danmaku.CM.start();
+                        _this.triggerTime();
+                    })
+
+                    _this.mp.video().addEventListener('pause',function() {
+                        _this._disableTime = false;
+                        $danmaku.CM.stop();
+                    })
+
+                    _this.mp.video().addEventListener('seeked',function() {
+                        $danmaku.cmClear();
+                        _this.playTime = _this.mp.video().currentTime * 1000;
+                    })
+
+                    _this.mp.on('fullscreen-change',function(data) {
+                        $danmaku.autoscaleComment();
+                    })
+                });
+            },
+            // 触发通报 CCL 播放时间
+            triggerTime:function() {
+                let _this = this;
+                if(!_this._disableTime) { return };
+
+                setTimeout(function() {
+                    _this.playTime += 100; // 每100毫秒追加时间轴，生成模拟播放
+
+                    console.log('Polling => ' + (_this.playTime / 1000) + 's');
+                    $danmaku.CM.time(_this.playTime); // 通报播放时间
+                    _this.triggerTime(); // 轮询调用
+                },100);
+            }
+        }
+
+        $danmaku.initCreateDanmaku();
+
+        $player.initCreateMuiplayer();
+
+    </script>
+</html>

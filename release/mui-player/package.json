@@ -1,0 +1,28 @@
+{
+  "name": "mui-player",
+  "version": "1.4.2",
+  "description": "Mui Player Javascript Library",
+  "main": "dist/mui-player.min.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muiplayer/hello-muiplayer"
+  },
+  "keywords": [
+    "muiplayer",
+    "mui-player",
+    "player",
+    "video",
+    "html5",
+    "hls",
+    "danmaku"
+  ],
+  "author": "Leisbanon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muiplayer/hello-muiplayer/issues"
+  },
+  "homepage": "https://github.com/muiplayer/hello-muiplayer#readme"
+}

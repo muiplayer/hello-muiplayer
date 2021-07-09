@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>mui-player 自定义扩展控件示例</title>
+        <link rel="stylesheet" href="../release/mui-player/dist/mui-player.min.css">
+        <script src="./static/js/config.js"></script>
+        <script src="../release/mui-player/dist/mui-player.min.js"></script>
+    </head>
+    
+	<body>
+        <h3 style="text-align: center;">自定义扩展控件示例</h3>
+        <div id="mui-player" style="max-width: 700px;margin: auto">
+            <!-- 自定义头部导航 -->
+			<template slot="likeButton">
+                <svg t="1607603509184" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2765"><path d="M333.90592 437.4016H174.7968v-187.5968H40.50944v524.288H174.7968v-219.648h159.10912v219.648h134.28736v-524.288H333.90592v187.5968z m639.90784-22.4256a235.24352 235.24352 0 0 0-37.60128-85.1968 179.05664 179.05664 0 0 0-91.98592-68.5056 275.69152 275.69152 0 0 0-80.896-11.4688H534.84544v524.288h229.84704c77.9776 0 139.776-34.5088 177.2544-99.84 28.01664-48.3328 41.6256-106.8032 41.59488-174.2848a397.4144 397.4144 0 0 0-9.728-84.992z m-141.4656 179.8144a100.57728 100.57728 0 0 1-34.12992 46.6944 87.808 87.808 0 0 1-52.56192 14.9504h-78.848v-288.9728h78.848a134.30784 134.30784 0 0 1 52.224 8.704 56.32 56.32 0 0 1 27.70944 23.552c13.55776 22.9376 21.41184 58.7776 21.36064 107.2128a236.75904 236.75904 0 0 1-14.60224 87.8592z" p-id="2766" fill="#ffffff"></path></svg>
+            </template>
+
+            <!-- 自定义底部导航 -->
+			<template slot="nextMedia">
+                <svg t="1584686776454" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1682"><path d="M783.14692466 563.21664097L240.85307534 879.55472126c-39.1656664 24.10194914-90.38230866-6.02548665-90.38230865-51.21664226v-632.676158c0-45.19115433 51.21664097-75.31859011 90.38230865-51.21664226l542.29384932 316.33808029c39.1656664 21.08920518 39.1656664 81.34407804 0 102.43328194z" p-id="1683" fill="#ffffff"></path><path d="M873.52923331 734.94302767c0 42.17841036-39.1656664 78.33133408-90.38230865 78.33133407s-90.38230866-36.15292371-90.38230735-78.33133407V289.05697233c0-42.17841036 39.1656664-78.33133408 90.38230735-78.33133407s90.38230866 36.15292371 90.38230865 78.33133407v445.88605534z" p-id="1684" fill="#ffffff"></path></svg>
+            </template>
+
+            <!-- 自定义弹出右侧栏窗口 -->
+			<template slot="HD">
+                <div style="color: white;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100%;">
+                    <p type="toggleHD" style="cursor: pointer">蓝光1080P</p>
+                    <p type="toggleHD" style="cursor: pointer">超清</p>
+                    <p type="toggleHD" style="cursor: pointer">高清</p>
+                    <p type="toggleHD" style="cursor: pointer">标清</p>
+                </div>
+            </template>
+        </div>
+    </body>
+    
+    <script>
+        var mp = null;
+        var config = window.playerConfig;
+        config.custom = {
+            headControls:[ //自定义播放器头控件列表，参数接受一个数组配置选项，最大可配置对象为5个.
+                {
+                    slot:'likeButton',
+                    click:function(e) {
+                        mp.showRightSidebar('HD');
+                    }
+                }
+            ],
+            footerControls:[ // 自定义播放器页脚控件列表，参数接受一个数组配置选项，最大可配置对象为5个.
+                {
+                    slot:'nextMedia',
+                    position:'left',
+                    click:function(e) {
+                        alert('next media...');
+                    }
+                },
+            ],
+            rightSidebar:[ // 自定义播放器弹出右侧栏，参数接受一个配置数组，最大可配置对象为5个
+                { slot:'HD',width:'200px' }
+            ],
+        }
+        
+        console.log(config);
+        mp = new MuiPlayer(config);
+    </script>
+</html>
