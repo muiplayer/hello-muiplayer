@@ -8,7 +8,7 @@ MuiPlayer 提供了一套样式统一，可观且响应式的移动端皮肤插�
 
 如果您的应用是运行在 [html5 plus](http://www.html5plus.org/doc/zh_cn/runtime.html) 环境中，那么使用该播放插件将会默认得到更多原生 api 的支持，例如播放控制设备音量、全屏时横竖屏播放、沉浸式播放等。你也可以使用原生与网页交互的方式来控制视频以及设备功能，MuiPlayer 提供了所有事件触发的回调函数。查看在 [uni-app 中的使用。](./uni-app/)
 
-**[PC端查看演示](../demo)，Google浏览器请开启手机调试模式**：
+**[查看演示](/zh/demo/)，电脑访问请使用Google浏览器打开手机调试模式：**：
 
 <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs"/>
 
@@ -30,11 +30,6 @@ MuiPlayer 提供了一套样式统一，可观且响应式的移动端皮肤插�
 ```html
 <!-- 使用 script 标签引入 -->
 <script type="text/javascript" src="js/mui-player-mobile-plugin.min.js"></script>
-```
-
-```js
-// 使用模块管理器引入插件
-import MuiPlayerMobilePlugin from 'mui-player-mobile-plugin'
 ```
 
 在主配置项 plugins 中传入：

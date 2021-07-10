@@ -12,7 +12,7 @@ MuiPlayer uses the GPL open source license agreement. Before that, please be sur
 
 ## Professional edition plugin
 
-MuiPlayer Professional Edition mobile terminal, PC terminal extension plug-ins have taken hundreds of days and have been continuously updated and fixed hundreds of key bugs. See the table below for the charges and descriptions of the professional plug-ins:
+The professional version of the mobile terminal and PC terminal extension plug-ins have taken hundreds of days and has been continuously updated to fix hundreds of key bugs. Please download the latest version before using it. One download is free for life! Usually the plugin is to keep the latest version.
 
 | plugin type                                        | Professional function                                        | Price(US)<br />invoice      | purchase address                                      |
 | :------------------------------------------------- | :----------------------------------------------------------- | :-------------------------- | :---------------------------------------------------- |

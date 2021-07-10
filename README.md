@@ -104,7 +104,6 @@ Install this project
 ```
 npm install
 npm start
-​```t
 ```
 
 ## Disclaimer

@@ -1,6 +1,6 @@
 {
   "name": "mui-player",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Mui Player Javascript Library",
   "main": "dist/mui-player.min.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "danmaku"
   ],
   "author": "Leisbanon",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/muiplayer/hello-muiplayer/issues"
   },

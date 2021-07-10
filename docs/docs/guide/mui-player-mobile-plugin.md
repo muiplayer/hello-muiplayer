@@ -4,7 +4,7 @@
 
 mui-player-mobile-plugin.js is an extension plug-in for the player. The plug-in enhances the maneuverability of the player on the mobile terminal, including the touch screen to control the progress and volume, lock the playback, and configure the main menu to switch the playback rate and loop playback. Wait.
 
-**To view the demo on the PC side, please turn on the mobile debugging mode for the Google browser：**
+**[View Demo](/demo/), For computer access, please use Google browser to open the phone debugging mode:**:
 
 <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs"/>
 
@@ -15,7 +15,7 @@ mui-player-mobile-plugin.js is an extension plug-in for the player. The plug-in 
 ## start using
 
 ::: warning Professional edition
-The plug-in is supported by the professional version, if you need to get the plug-in, <u>[click here](/joinUs/#professional-edition-plugin)</u> Check out the introduction of the professional version plug-in
+The plug-in is supported by the professional version, if you need to get the plugin, <u>[click here](/joinUs/#professional-edition-plugin)</u> Check out the introduction of the professional version plug-in
 :::
 
 Introduce **mui-player-mobile-plugin.js** on the page , the plug-in needs to be loaded before initializing the player:
@@ -23,11 +23,6 @@ Introduce **mui-player-mobile-plugin.js** on the page , the plug-in needs to be 
 ```html
 <!-- Use the script tag to import -->
 <script type="text/javascript" src="js/mui-player-mobile-plugin.min.js"></script>
-```
-
-```js
-// Use the module manager to introduce plugins
-import MuiPlayerMobilePlugin from 'mui-player-mobile-plugin'
 ```
 
 Pass in the main configuration item plugins:

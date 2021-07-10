@@ -1,5 +1,6 @@
-<div align="center"><img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logo.png" width="150px"></div>
-<div align="center">
+# <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/title_logo.png" />
+
+<div>
     <a href="https://www.npmjs.com/package/mui-player" target="_blank"><img src="https://img.shields.io/npm/v/mui-player?label=mui%20player" /></a>
     <a href="https://www.npmjs.com/package/mui-player-desktop-plugin" target="_blank"><img src="https://img.shields.io/npm/v/mui-player-desktop-plugin?label=mui%20player%20desktop" /></a>
 	<a href="https://www.npmjs.com/package/mui-player-mobile-plugin" target="_blank"><img src="https://img.shields.io/npm/v/mui-player-mobile-plugin?label=mui%20player%20mobile" /></a>
@@ -7,16 +8,21 @@
     <a href="https://github.com/muiplayer/hello-muiplayer/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-brightgreen" /></a>
 </div>
 
-<h1 align="center">Mui Player</h1>
+> Play, focus, connection, share and freedom 🚩
+
+![Desktop](https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/desktopPreview.png)
+
+![Mobile](https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png)
+
 <a href="https://muiplayer.js.org/" target="_blank">Docs</a> | <a href="https://muiplayer.js.org/zh/" target="_blank">中文文档</a>
 
 ## Introduction
 
-MuiPlayer is an HTML5 video playback plugin. By default, it is equipped with beautiful playback controls, which cover common playback scenes, such as full-screen playback, fast-forward playback, looping playback, volume adjustment, video decoding and other functions.
+MuiPlayer is an HTML5 video playback plug-in, which is configured with exquisite and operable playback controls by default, involving common playback scenarios, such as full-screen playback, playback fast forward, loop playback, volume adjustment, video decoding and other functions.
 
-Supports MP4, M3U8, FLV and other media formats to play, solve most compatibility problems, and adapt to the PC, mobile phone terminal playback.
+Support mp4, m3u8, flv and other media formats to play, solve most compatibility problems, and adapt to play on PCs and mobile phones.
 
-MUIPlayer has a wealth of parameters to customize the player instance, through easy configuration to complete the custom scene video playback.
+MuiPlayer has a wealth of parameters to customize the player instance, and the video playback of the customized scene can be completed through easy configuration.
 
 ## Features
 
@@ -83,6 +89,14 @@ var mp = new MuiPlayer({
 
 The above can build a video player with default configuration controls for initialization. Below you can read some API basic configuration options about MuiPlayer. Go [parameters API](https://muiplayer.js.org/api/)
 
+## Official document
+
+- [Official homepage](https://muiplayer.js.org/)
+- [API reference](https://muiplayer.js.org/guide/api.html)
+- [PC side extension plugin](https://muiplayer.js.org/guide/mui-player-desktop-plugin.html)
+- [Mobile side extension plugin](https://muiplayer.js.org/guide/mui-player-mobile-plugin.html)
+- [Basic demo](https://muiplayer.js.org/demo/)
+
 ## Start 
 
 Install this project
@@ -92,7 +106,21 @@ npm install
 npm start
 ```
 
-## Plugins
+## Disclaimer
 
-- [mui-player-mobile-plugin.js](https://www.npmjs.com/package/mui-player-mobile-plugin)
-- [mui-player-desktop-plugin.js](https://www.npmjs.com/package/mui-player-desktop-plugin)
+This is a non-commercial version of MuiPlayer. It does not include the same functions as a commercial player, but the open source version can still provide a stable video playback solution. Before using this, be sure to understand the software license of the open source project. If you want to get a commercial application player, please download from the official <u>[Professional Application Plugin](https://muiplayer.js.org/joinUs/)</u>.
+
+## ©️ Software License
+[GNU GENERAL PUBLIC LICENSE](https://github.com/muiplayer/hello-muiplayer/blob/master/LICENSE)
+
+Copyright (C) 2007 Free Software Foundation, Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+
+## ⭐ Stars
+
+[![Stargazers repo roster for @muiplayer/hello-muiplayer](https://reporoster.com/stars/muiplayer/hello-muiplayer)](https://github.com/muiplayer/hello-muiplayer/stargazers)
+
+## 👏 Forks
+
+[![Forkers repo roster for @muiplayer/hello-muiplayer](https://reporoster.com/forks/muiplayer/hello-muiplayer)](https://github.com/muiplayer/hello-muiplayer/network/members)
+
