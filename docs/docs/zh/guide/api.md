@@ -97,8 +97,9 @@ mp.on('ready',function(event) {
 });
 ```
 
-
 <div class="api-event"></div>
+
+
 
 | 事件名            | 类型        | 函数返回               | 说明                                                         |
 | ----------------- | ----------- | ---------------------- | ------------------------------------------------------------ |
@@ -125,19 +126,19 @@ var mp = new MuiPlayer(option);
 mp.showToast('提示...');
 ```
 
+<div class="api-inteface"></div>
 
-
-| 方法名           | 传参         | 必填 | 说明                                                         |
-| ---------------- | ------------ | ---- | ------------------------------------------------------------ |
-| toggleControls   | true / false | -    | 主动 隐藏/显示 播放器 controls。参数可传递一个布尔值用可强制显示或隐藏 |
-| showToast        | String       | -    | 弹出消息提示                                                 |
-| video            | -            | -    | 返回当前实例的原生video元素                                  |
-| reloadUrl        | Video src    | -    | 指定一个视频地址重新加载资源，不传参则默认重新加载           |
-| showRightSidebar | Slot name    |      | 弹出自定义右侧栏窗口，[参考](./custom-control.html#示例三-自定义右侧栏弹出窗口) |
-| showLoading      | -            | -    | 显示视频缓冲 loading                                         |
-| hideLoading      | -            | -    | 隐藏视频缓冲 loading                                         |
-| openFullScreen   | -            |      | 开启全屏播放                                                 |
-| closeFullScreen  | -            |      | 关闭全屏播放                                                 |
-| getControls      | -            |      | 获取所有播放器控件，返回一个数组                             |
-| destory          | -            | -    | 销毁视频播放器                                               |
-| sendError        | event        |      | 主动发送错误报告                                             |
+| 方法名           | 传参             | 必填 | 说明                                                         |
+| ---------------- | ---------------- | ---- | ------------------------------------------------------------ |
+| toggleControls   | true \| false    | -    | 主动 隐藏/显示 播放器 controls。参数可传递一个布尔值用可强制显示或隐藏 |
+| showToast        | String \| Object | -    | 弹出消息提示，参考接收一个字符或串或者对象<br />Ojbect = { message='', duration=1500, style={} }<br />duration 默认等于1500，单位毫秒 |
+| video            | -                | -    | 返回当前实例的原生video元素                                  |
+| reloadUrl        | Video src        | -    | 指定一个视频地址重新加载资源，不传参则默认重新加载           |
+| showRightSidebar | Slot name        |      | 弹出自定义右侧栏窗口，[参考](./custom-control.html#示例三-自定义右侧栏弹出窗口) |
+| showLoading      | -                | -    | 显示视频缓冲 loading                                         |
+| hideLoading      | -                | -    | 隐藏视频缓冲 loading                                         |
+| openFullScreen   | -                |      | 开启全屏播放                                                 |
+| closeFullScreen  | -                |      | 关闭全屏播放                                                 |
+| getControls      | -                |      | 获取所有播放器控件，返回一个数组                             |
+| destory          | -                | -    | 销毁视频播放器                                               |
+| sendError        | event            |      | 主动发送错误报告                                             |

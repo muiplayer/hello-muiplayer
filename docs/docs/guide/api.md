@@ -105,6 +105,7 @@ mp.on('ready',function(event) {
 
 <div class="api-event"></div>
 
+
 | Event name        | Types of    | Function returns       | Description                                                  |
 | ----------------- | ----------- | ---------------------- | ------------------------------------------------------------ |
 | back              | EventHandle |                        | Triggered when the back button is clicked.<br />Tag: Trigger only in non-full screen mode |
@@ -130,12 +131,13 @@ var mp = new MuiPlayer(option);
 mp.showToast('prompt...');
 ```
 
+<div class="api-inteface"></div>
 
 
 | Method name      | Transfer parameters | Required | Description                                                  |
 | ---------------- | ------------------- | -------- | ------------------------------------------------------------ |
-| toggleControls   | true / false        | -        | Actively hide/show player controls. The parameter can be passed a boolean value and can be forced to show or hide |
-| showToast        | String              | -        | Pop-up message prompt                                        |
+| toggleControls   | true \| false       | -        | Actively hide/show player controls. The parameter can be passed a boolean value and can be forced to show or hide |
+| showToast        | String \| Object    | -        | Pop-up message prompt, refer to receiving a character or string or object<br/>Ojbect = { message='', duration=1500, style={} }<br/>duration is equal to 1500 by default, in milliseconds |
 | video            | -                   | -        | Returns the native video element of the current instance     |
 | reloadUrl        | Video Src           | -        | Specify a video address to reload the resource, if no parameter is passed, it will reload by default |
 | showRightSidebar | Slot name           |          | pop up Customize the right sidebar window, [reference](./custom-control.html#example-3-customize-the-pop-up-window-on-the-right-sidebar) |

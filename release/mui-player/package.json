@@ -1,6 +1,6 @@
 {
   "name": "mui-player",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Mui Player Javascript Library",
   "main": "dist/mui-player.min.js",
   "scripts": {
