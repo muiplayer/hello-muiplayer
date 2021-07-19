@@ -6,7 +6,11 @@ export function listener() {
     });
 
     globals.mp.on('volume-change',function(e) {
-        globals.mp.video().volume = e.size;
+        if(window.plus) {
+            plus.device.setVolume(e.size);
+        }else {
+            globals.mp.video().volume = e.size;
+        }
     });
     
     globals.mp.on('share',function(e) {

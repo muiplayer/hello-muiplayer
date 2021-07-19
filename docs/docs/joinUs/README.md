@@ -1,10 +1,10 @@
-# Plug-in download
+# Plugin download
 
 ::: tip
 
 MuiPlayer uses the GPL open source license agreement. Before that, please be sure to understand the license description of the agreement and comply with the legal restrictions of the agreement.
 
-**For downloading "open source stable version" and "professional version" plug-ins. The professional version of the plug-in provides the best solution for paving the way for commercial applications, including the enhancement of the MuiPlayere mobile playback plug-in and the PC-side extension plug-in.**
+**For downloading "open source stable version" and "professional edition" plugins. The professional edition of the plugin provides the best solution for paving the way for commercial applications, including the enhancement of the MuiPlayere mobile playback plug-in and the PC-side extension plugin.**
 
 ::: 
 

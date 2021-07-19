@@ -15,9 +15,9 @@ So far, the player has completed 90% of the function development output, which h
 
 
 
-## Development assistance
+## Technical Support
 
-If you encounter problems during the development process, you can get in touch with me from here to provide you with the most direct [technical support](https://gum.co/ZhDmv)</u>
+If you encounter problems during the development process, you can get in touch with us to provide you with the most direct [technical support](https://gum.co/ZhDmv)</u>
 
 
 
