@@ -8,21 +8,29 @@ MuiPlayer 提供了一套样式统一，可观且响应式的移动端皮肤插�
 
 如果您的应用是运行在 [html5 plus](http://www.html5plus.org/doc/zh_cn/runtime.html) 环境中，那么使用该播放插件将会默认得到更多原生 api 的支持，例如播放控制设备音量、全屏时横竖屏播放、沉浸式播放等。你也可以使用原生与网页交互的方式来控制视频以及设备功能，MuiPlayer 提供了所有事件触发的回调函数。查看在 [uni-app 中的使用。](./uni-app/)
 
-**[查看演示](/zh/demo/)，电脑访问请使用Google浏览器打开手机调试模式：**：
+**[查看演示](/zh/demo/)，电脑访问请使用Google浏览器打开手机调试模式：**
 
 <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs"/>
 
 :::
 
 
+## 扫码演示
+<br/>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/browser_view.png" class="zoom-custom-imgs" style="border: 1px solid #eaecef;" />
+
+<div style="width: 50px;display: inline-block;"></div>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/app_view.png" class="zoom-custom-imgs" style="border: 1px solid #eaecef;"  />
+
+
+
+## 下载
+
+该插件由专业版提供支持，如需获取插件，<u>[点击这里](/zh/joinUs/#专业版插件)</u> 查看专业版插件介绍并进行下载！
 
 
 
 ## 开始使用
-
-::: warning 专业版功能
-该插件由专业版提供支持，如需获取插件，<u>[点这里](/zh/joinUs/#专业版插件)</u> 查看下载专业版插件介绍
-:::
 
 
 在页面引入 **mui-player-mobile-plugin.js**，插件需要在初始化播放器之前加载：
@@ -55,7 +63,7 @@ var mp = new MuiPlayer({
 
 扩展插件可配置 API：
 
-<div class="mobile-api"></div>
+<div class="mobile-api" />
 
 | 属性名                            | 类型    | 默认值 | 说明                                                         |
 | --------------------------------- | ------- | ------ | ------------------------------------------------------------ |
@@ -97,4 +105,5 @@ mp.on('volume-change',function(e) {
 | volume-change    | EventHandle | { size } | 音量调节时触发                      |
 | luminance-change | EventHandle | { size } | 亮度调节时触发                      |
 | share            | EventHandle | { type } | 默认侧栏主菜单 - 分享按钮点击时触发 |
+
 

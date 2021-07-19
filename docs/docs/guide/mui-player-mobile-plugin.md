@@ -4,21 +4,27 @@
 
 mui-player-mobile-plugin.js is an extension plug-in for the player. The plug-in enhances the maneuverability of the player on the mobile terminal, including the touch screen to control the progress and volume, lock the playback, and configure the main menu to switch the playback rate and loop playback. Wait.
 
-**[View Demo](/demo/), For computer access, please use Google browser to open the phone debugging mode:**:
+**[View Demo](/demo/), For computer access, please use Google browser to open the phone debugging mode:**
 
 <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs"/>
 
 :::
 
+## Scan QR code
+<br/>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/browser_view.png" class="zoom-custom-imgs" style="border: 1px solid #eaecef;" />
 
+<div style="width: 50px;display: inline-block;"></div>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/app_view.png" class="zoom-custom-imgs" style="border: 1px solid #eaecef;"  />
+
+
+## download
+
+The plugin is supported by the professional version. If you need to get the plugin, <u>[click here](/joinUs/#professional-edition-plugin)</u> View the introduction of the professional version and download it!
 
 ## start using
 
-::: warning Professional edition
-The plugin is supported by the professional version, if you need to get the plugin, <u>[click here](/joinUs/#professional-edition-plugin)</u> Check out the introduction of the professional version plug-in
-:::
-
-Introduce **mui-player-mobile-plugin.js** on the page , the plug-in needs to be loaded before initializing the player:
+Introduce **mui-player-mobile-plugin.js** on the page , the plugin needs to be loaded before initializing the player:
 
 ```html
 <!-- Use the script tag to import -->
