@@ -132,7 +132,7 @@ new MuiPlayerDesktopPlugin({
 ## Customize the right-click menu
 
 ::: warning Professional edition
-The stable version of the PC-side extension plug-in currently does not support the function of customizing the right-click menu. If you need to apply this configuration, <u>[click here](/joinUs/#professional-edition-plugin)</u> View the introduction of obtaining the professional version plug-in
+The stable version of the PC-side extension plug-in currently does not support the function of customizing the right-click menu. If you need to apply this configuration, <u>[click here](/joinUs/#professional-edition-plugin)</u> View the introduction of download the professional edition plugin
 :::
 
 ```javascript

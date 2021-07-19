@@ -15,7 +15,7 @@ mui-player-mobile-plugin.js is an extension plug-in for the player. The plug-in 
 ## start using
 
 ::: warning Professional edition
-The plug-in is supported by the professional version, if you need to get the plugin, <u>[click here](/joinUs/#professional-edition-plugin)</u> Check out the introduction of the professional version plug-in
+The plugin is supported by the professional version, if you need to get the plugin, <u>[click here](/joinUs/#professional-edition-plugin)</u> Check out the introduction of the professional version plug-in
 :::
 
 Introduce **mui-player-mobile-plugin.js** on the page , the plug-in needs to be loaded before initializing the player:
