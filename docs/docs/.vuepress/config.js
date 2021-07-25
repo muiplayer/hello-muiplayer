@@ -16,6 +16,7 @@ module.exports = ctx => ({
 		['link', { rel: 'icon', href: `/favicon.ico` }],
 		['link', { rel: 'manifest', href: '/manifest.json' }],
 		['link', { rel: 'stylesheet', href: `/css/mui-player.min.css` }],
+		['link', { rel: 'stylesheet', href: `/css/swiper.min.css` }],
 		['link', { rel: 'stylesheet', href: `/css/CommentCoreLibrary.min.css` }],
 		['meta', { name: 'baidu-site-verification', content: 'code-AdGRxnQ9NZ' }],
 		['meta', { name: 'theme-color', content: '#1e98d4' }],
@@ -35,6 +36,7 @@ module.exports = ctx => ({
 		['script', { src: `/js/mui-player.min.js` }],
 		['script', { src: `/js/mui-player-desktop-plugin.min.js` }],
 		['script', { src: `/js/CommentCoreLibrary.min.js` }],
+		['script', { src: `/js/swiper.min.js` }],
 	],
 	themeConfig: {
 		repo: 'muiplayer/hello-muiplayer',

@@ -2,7 +2,7 @@
 home: true
 heroImage: https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logo.png
 heroText: Mui Player
-tagline: An excellent H5 video player framework
+tagline: An excellent HTML5 video player framework
 sidebarDepth: 2
 features:
 - title: Multi-format support
