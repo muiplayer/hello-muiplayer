@@ -112,6 +112,10 @@ npm start
 
 这是 MuiPlayer 的非商业版本，它不包含提供商业用途播放器的相同功能，但是开源版本依然可提供稳定的视频播放解决方案。在使用此之前，请务必了解该开源项目的软件许可证。如果您想获取商业应用播放器，请从官方下载 <u>[专业版应用插件](https://muiplayer.js.org/zh/joinUs/)</u>。
 
+## 入群与咨询
+QQ：3131244726
+
+
 ## ©️ Software License
 [GNU GENERAL PUBLIC LICENSE](https://github.com/muiplayer/hello-muiplayer/blob/master/LICENSE)
 

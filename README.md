@@ -110,6 +110,9 @@ npm start
 
 This is a non-commercial version of MuiPlayer. It does not include the same functions as a commercial player, but the open source version can still provide a stable video playback solution. Before using this, be sure to understand the software license of the open source project. If you want to get a commercial application player, please download from the official <u>[Professional Application Plugin](https://muiplayer.js.org/joinUs/)</u>.
 
+## Join group and consulting
+QQ：3131244726
+
 ## ©️ Software License
 [GNU GENERAL PUBLIC LICENSE](https://github.com/muiplayer/hello-muiplayer/blob/master/LICENSE)
 
