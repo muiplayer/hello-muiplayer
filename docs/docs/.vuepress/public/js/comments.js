@@ -737,14 +737,6 @@ export default [
     },
     {
         "mode":1,
-        "text":"卧槽",
-        "stime":17400,
-        "size":25,
-        "dur":7000,
-        "color":0xffffff
-    },
-    {
-        "mode":1,
         "text":"真的厉害",
         "stime":17600,
         "size":25,

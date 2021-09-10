@@ -35,9 +35,10 @@ var mp = new MuiPlayer({
 | container      | String/Element | required           | 指定播放器容器                                               |
 | src            | String         | required           | 视频播放的资源地址                                           |
 | title          | String         |                    | 标题                                                         |
-| autoplay       | Boolean        | false              | 是否自动播放                                                 |
+| autoplay       | Boolean        | false              | 是否自动播放，关于 autoplay 属性设置问题请[参考](./other-problem.html) |
 | preload        | String         | auto               | 视频是否预加载，可选值 none \| metadata \| auto。如果 autoplay=true，则忽略该属性。 |
 | loop           | Boolean        | false              | 是否循环播放                                                 |
+| muted          | Boolean        | false              | 是否静音播放                                                 |
 | width          | String/Number  | auto               | 初始化播放器宽度                                             |
 | height         | String/Number  | 225px              | 初始化播放器高度                                             |
 | lang           | String         | navigator.language | 播放器界面语言，可选 en \| zh-cn \| zh-tw                    |
@@ -98,8 +99,6 @@ mp.on('ready',function(event) {
 ```
 
 <div class="api-event"></div>
-
-
 
 | 事件名            | 类型        | 函数返回               | 说明                                                         |
 | ----------------- | ----------- | ---------------------- | ------------------------------------------------------------ |

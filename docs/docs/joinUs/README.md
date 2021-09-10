@@ -17,12 +17,7 @@ The professional version of the mobile terminal and PC terminal extension plug-i
 | plugin type                                        | Professional function                                        | Price(US)<br />invoice     | purchase address                       |
 | :------------------------------------------------- | :----------------------------------------------------------- | :------------------------- | :------------------------------------- |
 | Mobile <br />Extension plugin professional edition | 1. Get the professional version of the mobile playback extension plug-in ✔️ <br />2. Free access to future update versions ✔️<br />3. Compatible with Iphone, Androi models and uniapp webview ✔️<br />4. Support Uniapp Webview and use in H5+ APP ✔️<br />5. Supports simplified Chinese, traditional Chinese, and English three language configurations ✔️<br />6. Professional technical development support ✔️<br />7. Eligible to enter the VIP group ✔️<br />8. Customizable player development ✔️ | / <br />(Ordinary invoice) | / |
-| PC<br />Extension plugin professional edition      | 1. Get the professional version of the PC playback extension plug-in ✔️<br />2. Extensible player right-click menu configuration ✔️<br />3. Support play hover configuration ✔️<br />4. Free access to future update versions ✔️<br />5. Compatible with mainstream browsers, including IE11 ✔️<br />6. Professional technical development support ✔️<br />7. Eligible to enter the VIP group ✔️<br />8. Customizable player development ✖️ | / <br />(Ordinary invoice) | / |
 
 
-
-## Open source stable edition
-
-You can get our open source stable release package from [Github](https://github.com/muiplayer/hello-muiplayer). If you are in China, build from [Gitee](https://gitee.com/muiplayer/hello-muiplayer) warehouse download. At the same time, we also released [NPM](https://www.npmjs.com/search?q=muiplayer), so you can also download the plug-in through npm install.
 
 

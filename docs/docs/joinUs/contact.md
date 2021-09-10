@@ -20,7 +20,3 @@ So far, the player has completed 90% of the function development output, which h
 If you encounter problems during the development process, you can get in touch with us to provide you with the most direct [technical support](https://gum.co/ZhDmv)</u>
 
 
-
-## Contact us
-
-You can get in touch with us through the email instructions on the homepage of [Github](https://github.com/muiplayer).

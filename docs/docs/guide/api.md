@@ -39,9 +39,10 @@ var mp = new MuiPlayer({
 | container      | String/Element | required           | Specify the player container                                 |
 | src            | String         | required           | Resource address for video playback                          |
 | title          | String         |                    | title                                                        |
-| autoplay       | Boolean        | false              | Whether to play automatically                                |
+| autoplay       | Boolean        | false              | Whether to play automatically, please [reference](./other-problem.html) for the setting of autoplay attribute |
 | preload        | String         | auto               | Whether the video is preloaded, the optional value is none \| metadata \| auto. If autoplay=true, this attribute is ignored. |
 | loop           | Boolean        | false              | Whether to loop                                              |
+| muted          | Boolean        | false              | Whether to play muted                                        |
 | width          | String/Number  | auto               | Initialize the player width                                  |
 | height         | String/Number  | 225px              | Initialize the player height                                 |
 | lang           | String         | navigator.language | Player interface language, optional en \| zh-cn \| zh-tw     |
@@ -105,7 +106,6 @@ mp.on('ready',function(event) {
 
 <div class="api-event"></div>
 
-
 | Event name        | Types of    | Function returns       | Description                                                  |
 | ----------------- | ----------- | ---------------------- | ------------------------------------------------------------ |
 | back              | EventHandle |                        | Triggered when the back button is clicked.<br />Tag: Trigger only in non-full screen mode |
@@ -132,7 +132,6 @@ mp.showToast('prompt...');
 ```
 
 <div class="api-inteface"></div>
-
 
 | Method name      | Transfer parameters | Required | Description                                                  |
 | ---------------- | ------------------- | -------- | ------------------------------------------------------------ |

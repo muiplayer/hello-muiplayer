@@ -19,8 +19,3 @@
 
 如果您在开发过程中遇到问题，可以与我们取得联系，从而为您提供的最直接的 [技术支持](https://www.syjshare.com/res/W87H0VBD)</u>
 
-
-
-## 联系我们 
-
-可通 [Github](https://github.com/muiplayer)首页邮件说明与我们取得联系。

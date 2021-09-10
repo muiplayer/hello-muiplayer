@@ -5,6 +5,11 @@
 	- Inline playback: In some mobile browsers, when the video is played, it will automatically enter the full-screen playback state. By setting the two properties of playsline and webkit-playsline, you can prevent automatic full-screen playback during playback.
 	- Same-layer playback: Same-layer playback mainly deals with the playback form of the video in full-screen playback. In some browsers, such as WeChat and QQ browsers, when the video is full-screen, the built-in player component of the browser will be called to play the video. In order to display our customized elements on the video, Tencent Browser proposed this concept, see: [https://x5.tencent.com/docs/video.html](https://x5.tencent.com/docs/video.html), But many browsers still have the problem of hijacking the html5 video tag during video playback, which is determined by the browser.
 
+	#### <u> Video autoplay autoplay attribute setting problem?</u>
+	
+	- In Chrome 66, the auto-play strategy is activated for audio and video. The purpose is to improve the user experience, minimize the motivation to install ad blockers, and reduce data consumption on expensive and/or restricted networks. Reference: [https://developer.chrome.com/blog/autoplay/](https://developer.chrome.com/blog/autoplay/)
+	- But we can still try autoplay! Since Android Chrome53 supports silent playback, that is, set the autoplay and muted properties of the video, then the video can start to play automatically, but the performance on IOS is still strict. The automatic playback of ios10 and above is suitable for videos with no sound or disabled audio tracks . Reference: [https://developers.google.com/web/updates/2016/07/autoplay](https://developers.google.com/web/updates/2016/07/autoplay)
+	
 - #### <u>Can't the video be full screen?</u>
   
   - If the player is embedded in an Iframe, add the allowfullscreen attribute to the iframe tag to allow full screen mode to be activated. The attributes you should add are allowfullscreen, webkitallowfullscreen, mozallowfullscreen
@@ -17,10 +22,6 @@
 - #### <u>How to rewrite and hide the default controls of the player?</u>
 	
 	- If you need to hide the default playback and full-screen operation controls, you can get all the controls through the getControls() method, and then you can customize the behavior of the DOM operation
-- #### <u>Is there a problem with video autoplay?</u>
-	
-	- Some browsers prohibit automatic video playback. In the previous strategy of IOS Safari, the addition of the autoplay attribute to the video does not trigger the automatic playback, and a gesture of the user is required to trigger the playback of the video. Apple added this restriction in order to save the user's high traffic and save power, but in the IOS 10 Safari video playback strategy, this restriction has been relaxed. See: [https://webkit.org/blog/6784/new-video-policies-for-ios/
-	    ](https://webkit.org/blog/6784/new-video-policies-for-ios/)
 - #### How to listen to more native Video events?
 	
 	- MuiPlayer supports all native Video events, and native events can be added by obtaining media instances through mp.video(). For media-related event API, please refer to:

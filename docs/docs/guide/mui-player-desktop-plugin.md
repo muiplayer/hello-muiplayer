@@ -74,12 +74,12 @@ Extension plug-in configurable API
 | customSetting.childConfig | Array    | []                                                           | Child setting group configuration, the configuration parameters are the same as the parent setting group parameters |
 | customSetting.onToggle    | Function | callback(  data,  selected,  back)                           | The callback function after the group option is clicked, receives three parameters for processing actions:<br /><br />1. data: currently selected configuration item<br />2. selected: function, you must manually call this function to select the item<br />3. back: function, call this function to trigger the return to the parent setting group, the parameter can receive a number in milliseconds to indicate the delayed return |
 | #                         |          |                                                              |                                                              |
-| ~~contextmenu~~           | Array    | {name:'shortcuts',<br />context:'Shortcuts'},<br /><br />{name:'muiplayer',<br />context:'MuiPlayer'} | Customize the right-click menu, [reference](#customize-the-right-click-menu) |
-| ~~contextmenu.name~~      | String   |                                                              | Menu identification name, if the name is the same as a name in the right-click menu group, then the default menu group will be overwritten |
-| ~~contextmenu.context~~   | String   |                                                              | Right-click the menu name                                    |
-| ~~contextmenu.zIndex~~    | Number   |                                                              | Group display level, the larger the zIndex, the higher the order of the group |
-| ~~contextmenu.show~~      | Boolean  |                                                              | Whether to show                                              |
-| ~~contextmenu.click~~     | Function | callback(close)                                              | Callback function after click. [Close: function, call the function actively to close the right-click menu] |
+| contextmenu               | Array    | {name:'shortcuts',<br />context:'Shortcuts'},<br /><br />{name:'muiplayer',<br />context:'MuiPlayer'} | Customize the right-click menu, [reference](#customize-the-right-click-menu) |
+| contextmenu.name          | String   |                                                              | Menu identification name, if the name is the same as a name in the right-click menu group, then the default menu group will be overwritten |
+| contextmenu.context       | String   |                                                              | Right-click the menu name                                    |
+| contextmenu.zIndex        | Number   |                                                              | Group display level, the larger the zIndex, the higher the order of the group |
+| contextmenu.show          | Boolean  |                                                              | Whether to show                                              |
+| contextmenu.click         | Function | callback(close)                                              | Callback function after click. [Close: function, call the function actively to close the right-click menu] |
 | #                         |          |                                                              |                                                              |
 | thumbnails                | Object   | {}                                                           | Thumbnail configuration, [see](/thumbnails/)                 |
 | #                         |          |                                                              |                                                              |
@@ -129,11 +129,7 @@ new MuiPlayerDesktopPlugin({
 
 
 
-## Customize the right-click menu
-
-::: warning Professional edition
-The stable version of the PC-side extension plug-in currently does not support the function of customizing the right-click menu. If you need to apply this configuration, <u>[click here](/joinUs/#professional-edition-plugin)</u> View the introduction of download the professional edition plugin
-:::
+## Customize the right click menu
 
 ```javascript
 new MuiPlayerDesktopPlugin({

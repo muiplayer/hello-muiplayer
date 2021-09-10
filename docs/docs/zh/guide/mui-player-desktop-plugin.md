@@ -76,12 +76,12 @@ var mp = new MuiPlayer({
 | customSetting.childConfig | Array    | []                                                           | 子设置组配置，配置参数同父级设置组参数                       |
 | customSetting.onToggle    | Function | callback(<br/>data,<br/>selected,<br/>back)                  | 组选项点击后的回调函数，接收三个参数可供处理动作：<br />1、data：当前选择配置项<br />2、selected： 函数，必须手动调用该函数来选择项目<br />3、back： 函数，调用该函数触发返回父级设置组，参数可接收一个毫秒单位的数字表示延迟返回 |
 | #                         |          |                                                              |                                                              |
-| ~~contextmenu~~           | Array    | {name:'shortcuts',<br />context:'快捷键'},<br /><br />{name:'muiplayer',<br />context:'MuiPlayer'} | 自定义右键菜单，[参考](#自定义右键菜单)                      |
-| ~~contextmenu.name~~      | String   |                                                              | 菜单标识名，如该名称与右击菜单组中某个名称相同，那么将重写默认菜单组 |
-| ~~contextmenu.context~~   | String   |                                                              | 右击菜单名称                                                 |
-| ~~contextmenu.zIndex~~    | Number   |                                                              | 组显示层级，zIndex越大该组排列顺序越靠前                     |
-| ~~contextmenu.show~~      | Boolean  |                                                              | 是否显示                                                     |
-| ~~contextmenu.click~~     | Function | callback(close)                                              | 点击后回调函数。【close：函数，主动调用函数可关闭右击菜单】  |
+| contextmenu               | Array    | {name:'shortcuts',<br />context:'快捷键'},<br /><br />{name:'muiplayer',<br />context:'MuiPlayer'} | 自定义右键菜单，[参考](#自定义右键菜单)                      |
+| contextmenu.name          | String   |                                                              | 菜单标识名，如该名称与右击菜单组中某个名称相同，那么将重写默认菜单组 |
+| contextmenu.context       | String   |                                                              | 右击菜单名称                                                 |
+| contextmenu.zIndex        | Number   |                                                              | 组显示层级，zIndex越大该组排列顺序越靠前                     |
+| contextmenu.show          | Boolean  |                                                              | 是否显示                                                     |
+| contextmenu.click         | Function | callback(close)                                              | 点击后回调函数。【close：函数，主动调用函数可关闭右击菜单】  |
 | #                         |          |                                                              |                                                              |
 | thumbnails                | Object   | {}                                                           | 缩略图配置，[参见](./thumbnails/)                            |
 | #                         |          |                                                              |                                                              |
@@ -133,10 +133,6 @@ new MuiPlayerDesktopPlugin({
 
 
 ##  自定义右键菜单
-
-::: warning 专业版功能
-稳定版 PC 端扩展插件暂未支持自定义右键菜单的功能，如需应用该配置，<u>[点这里](/zh/joinUs/#专业版插件)</u> 查看下载专业版插件介绍
-:::
 
 
 ```javascript
