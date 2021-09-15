@@ -11,7 +11,7 @@ features:
   details: MuiPlayer has a wealth of parameters to customize the player instance, and the video playback of the customized scene can be completed through easy configuration.
 - title: Simple design style
   details: The design style of the player is relaxed and simple, and the theme style of the player can be customized. It also has a set of beautiful functional control design independently on PC and mobile phone.
-footer: MIT Licensed | Copyright © 20210502-present Leisbanon
+footer: GPL Licensed | Copyright © 20210502-present Leisbanon
 ---
 
 <ClientOnly><MuiPlayer></MuiPlayer></ClientOnly>

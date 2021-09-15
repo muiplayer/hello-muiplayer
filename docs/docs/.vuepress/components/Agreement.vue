@@ -35,8 +35,8 @@
                 },
 
                 li0:{
-                    en:'All code of this open source project is based on the MIT license agreement, and you default to abide by the obligations stipulated in the license agreement.',
-                    cn:'此开源项目所有代码基于 MIT 许可协议，您默认遵守许可协议中约定的义务。'
+                    en:'All code of this open source project is based on the GPL license agreement, and you default to abide by the obligations stipulated in the license agreement.',
+                    cn:'此开源项目所有代码基于 GPL 许可协议，您默认遵守许可协议中约定的义务。'
                 },
 
                 li1:{
