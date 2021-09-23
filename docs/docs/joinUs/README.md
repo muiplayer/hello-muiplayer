@@ -2,15 +2,15 @@
 
 ::: tip
 
-MuiPlayer uses the GPL open source license agreement. Before that, please be sure to understand the license description of the agreement and comply with the legal restrictions of the agreement.
+MuiPlayer uses the GPL open source license agreement. Before that, please be sure to understand the license description of the agreement and comply with the legal conditions of the agreement.
 
-**For downloading "open source stable version" and "professional edition" plugins. The professional edition of the plugin provides the best solution for paving the way for commercial applications, including the enhancement of the MuiPlayere mobile playback plug-in and the PC-side extension plugin.**
+You can get the plugin release package from the open source address [Github](https://github.com/muiplayer/hello-muiplayer). Open source is not easy, remember to point a little star ⭐ ~
 
 ::: 
 
 
 
-## Professional edition plugin
+## Value added services
 
 The professional version of the mobile terminal and PC terminal extension plug-ins have taken hundreds of days and has been continuously updated to fix hundreds of key bugs. Please download the latest version before using it. One download is free for life! Usually the plugin is to keep the latest version.
 

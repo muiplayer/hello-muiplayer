@@ -20,8 +20,8 @@ mui-player-mobile-plugin.js is an extension plug-in for the player. The plug-in 
 
 ## download
 
-::: warning Professional edition plugin
-The plugin is supported by the professional edition. If you need to get the plugin, <u>[click here](/joinUs/#professional-edition-plugin)</u> View the introduction of the professional edition and download it!
+::: warning Value added services
+The plug-in is supported by the professional version. If you need to get the plug-in, please [click here](/joinUs/#professional-edition-plugin) to view the download and introduction of the professional version.
 :::
 
 
@@ -58,6 +58,7 @@ var mp = new MuiPlayer({
 Extension plug-in configurable API:
 
 <div class="mobile-api"></div>
+
 
 | Attribute name                    | Types of | Defaults | Description                                                  |
 | --------------------------------- | -------- | -------- | ------------------------------------------------------------ |
