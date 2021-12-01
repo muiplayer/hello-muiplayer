@@ -3,9 +3,9 @@ import globals from '../../public/js/global'
 
 export default {
     container:'#mui-player',
-    src:'http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8',
+    src:'https://itv.olevod.tv:5443/live/cctv1hdbupt.m3u8',
     title:'',
-    autoplay:false,
+    autoplay:true,
     autoFit:true,
     live:true,
     objectFit:'contain',

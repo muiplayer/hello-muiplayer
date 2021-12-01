@@ -1,8 +1,8 @@
 import globals from './global'
 
 export function listener() {
-    globals.mp.on('error',function(e) {
-        console.error(e);
+    globals.mp.on('error',function(event, data) {
+        console.error(event);
     });
 
     globals.mp.on('volume-change',function(e) {

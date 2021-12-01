@@ -1,8 +1,18 @@
 import Flv from 'flv.js'
 import Hls from 'hls.js'
-// import dashjs from 'dashjs'
+import dashjs from 'dashjs'
+
+import globals from './global'
 
 var customKernelFun = function(video,src) {
+    let _destory = (kernel) => {
+        setTimeout(() => {
+            globals.mp.on('destory',function() {
+                kernel.destroy();
+            })
+        },500);
+    }
+
     // hls decode
     let hlsDecodeAction = () => {
         console.log('custom hls create...');
@@ -20,8 +30,11 @@ var customKernelFun = function(video,src) {
         hls.on(Hls.Events.ERROR,function(errMes) {
             console.error(errMes);
             // 发送错误报告
-            player.sendError(errMes);
+            globals.mp.sendError(errMes);
         });
+
+        // observe destory
+        _destory(hls)
     }
 
     // flv decode
@@ -38,8 +51,11 @@ var customKernelFun = function(video,src) {
         flv.on(Flv.Events.ERROR,function(errMes) {
             console.error(errMes);
             // 发送错误报告
-            player.sendError(errMes);
+            globals.mp.sendError(errMes);
         });
+
+        // observe destory
+        _destory(flv)
     }
 
     // dash decode
@@ -49,10 +65,13 @@ var customKernelFun = function(video,src) {
         dashMedia.on(dashjs.MediaPlayer.events.ERROR,function(errMes) {
             console.error(errMes);
             // 发送错误报告
-            player.sendError(errMes);
+            globals.mp.sendError(errMes);
 
             dashMedia.reset();
         })
+
+        // observe destory
+        _destory(dashMedia)
     }
 
     // mp4 decode play
@@ -64,7 +83,7 @@ var customKernelFun = function(video,src) {
     // execute the appropriate decoder
     src.indexOf('.m3u8') != -1 ? hlsDecodeAction() : '';
     src.indexOf('.flv') != -1 ? flvDecodeAction() : '';
-    // src.indexOf('.mpd') != -1 ? dashDecodeAction() : '';
+    src.indexOf('.mpd') != -1 ? dashDecodeAction() : '';
     src.indexOf('.mp4') != -1 ? mp4DecodeAction() : '';
 }
 
