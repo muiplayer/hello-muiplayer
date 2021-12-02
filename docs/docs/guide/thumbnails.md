@@ -6,7 +6,7 @@ When the video is fast-forwarded or you want to jump to a certain playback time 
 
 The thumbnail function is actually implemented by one or more pictures. The pictures are composed of multiple regularly arranged video clips. This is how you can view various video media sites such as youtube. For example, the picture below is a tile=6x5, scale =160x120 thumbnail.
 
-<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/thumbnails_preview.png" class="zoom-custom-imgs"/>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/thumbnails_preview.png" class="zoom-custom-imgs" alt="Video thumbnail" />
 
 :::
 

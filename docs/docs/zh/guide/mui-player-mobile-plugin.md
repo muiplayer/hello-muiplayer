@@ -10,7 +10,7 @@ MuiPlayer 提供了一套样式统一，可观且响应式的移动端皮肤插�
 
 **[查看演示](/zh/demo/)，电脑访问请使用Google浏览器打开手机调试模式：**
 
-<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs"/>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs" alt="MuiPlayer 移动端扩展插件预览图" />
 
 :::
 

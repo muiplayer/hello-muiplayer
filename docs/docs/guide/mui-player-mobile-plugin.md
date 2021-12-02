@@ -2,11 +2,11 @@
 
 ::: tip
 
-mui-player-mobile-plugin.js is an extension plug-in for the player. The plug-in enhances the maneuverability of the player on the mobile terminal, including the touch screen to control the progress and volume, lock the playback, and configure the main menu to switch the playback rate and loop playback. Wait.
+mui-player-mobile-plugin.js is an extension plugin for the player. The plug-in enhances the maneuverability of the player on the mobile terminal, including the touch screen to control the progress and volume, lock the playback, and configure the main menu to switch the playback rate and loop playback. Wait.
 
 **[View Demo](/demo/), For computer access, please use Google browser to open the phone debugging mode:**
 
-<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs"/>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs" alt="MuiPlayer Mobile extension plugin"/>
 
 :::
 

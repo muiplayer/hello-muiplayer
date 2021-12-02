@@ -4,12 +4,12 @@ module.exports = ctx => ({
 		'/': {
 			lang: 'en-US',
 			title: 'MuiPlayer',
-			description: 'An excellent H5 video player framework'
+			description: 'Mui Player is an excellent HTML5 web page video player framework, providing fullscreen play, fast forward play, video danmaku, decoding and other most commonly used video play functions',
 		},
 		'/zh/': {
 			lang: 'zh-CN',
 			title: 'MuiPlayer',
-			description: '一款优秀的 H5 视频播放器框架'
+			description: 'Mui Player 是一款优秀的 HTML5 网页视频播放器框架，提供全屏播放，播放快进，视频弹幕，解码等最常用的视频播放功能',
 		}
 	},
 	head: [
@@ -18,11 +18,16 @@ module.exports = ctx => ({
 		['link', { rel: 'stylesheet', href: `/css/mui-player.min.css` }],
 		['link', { rel: 'stylesheet', href: `/css/swiper.min.css` }],
 		['link', { rel: 'stylesheet', href: `/css/CommentCoreLibrary.min.css` }],
+		['link', { rel: 'apple-touch-icon', href: `https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logo_solid.png` }],
+		['meta', { name: 'charset', content: 'utf-8' }],
 		['meta', { name: 'baidu-site-verification', content: 'code-AdGRxnQ9NZ' }],
-		['meta', { name: 'theme-color', content: '#1e98d4' }],
 		['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
 		['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-		['link', { rel: 'apple-touch-icon', href: `https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logo_solid.png` }],
+		['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
+		['meta', { property: 'og:site_name', content: 'MuiPlayer' }],
+        ['meta', { property: 'og:type', content: 'article' }],
+        ['meta', { property: 'og:image', content: 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png' }],
+		['meta', { name: 'theme-color', content: '#1e98d4' }],
 		['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-X4RSEE27EY' }],
 		['script', {}, `
             window.dataLayer = window.dataLayer || [];

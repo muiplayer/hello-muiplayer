@@ -6,7 +6,7 @@
 
 缩略图功能的实现实际上是由一张或者多张图片，图片由多个规则排列的视频片段构成，查看 youtube 等各视频媒体站点都是这样实现的，例如下图是一个 tile=6x5，scale=160x120 的缩略图。 
 
-<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/thumbnails_preview.png" class="zoom-custom-imgs"/>
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/thumbnails_preview.png" class="zoom-custom-imgs" alt="视频缩略图"/>
 
 :::
 
