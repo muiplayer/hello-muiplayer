@@ -62,7 +62,7 @@
     "flv.js": "^1.5.0",
     "hls.js": "^0.14.16",
     "mui-player": "^1.6.0",
-    "mui-player-desktop-plugin": "^1.4.0",
+    "mui-player-desktop-plugin": "^1.4.1",
     "mui-player-mobile-plugin": "^1.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "mui-player-desktop-plugin",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Mui Player Desktop Plugin Javascript Library",
   "main": "dist/mui-player-desktop-plugin.min.js",
   "scripts": {
