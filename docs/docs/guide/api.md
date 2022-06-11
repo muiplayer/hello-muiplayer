@@ -104,7 +104,6 @@ mp.on('ready',function(event) {
 });
 ```
 
-<div class="api-event"></div>
 
 | Event name        | Types of    | Function returns       | Description                                                  |
 | ----------------- | ----------- | ---------------------- | ------------------------------------------------------------ |
@@ -131,7 +130,6 @@ var mp = new MuiPlayer(option);
 mp.showToast('prompt...');
 ```
 
-<div class="api-inteface"></div>
 
 | Method name      | Transfer parameters | Required | Description                                                  |
 | ---------------- | ------------------- | -------- | ------------------------------------------------------------ |
