@@ -9,7 +9,7 @@
     export default {
         props:{
             placeholder:{
-                default:'the input video url'
+                default:'The input mp4 video url'
             },
             buttonText:{
                 default:'Toggle URL'

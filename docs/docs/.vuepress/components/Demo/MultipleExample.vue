@@ -11,17 +11,16 @@
 
 <script>
     import config from '../../public/js/config_demo.js'
+    import globals from '../../public/js/global.js'
 
     export default {
         data() {
             return {
-                loadType:'mp4',
-
                 medias:[
-                    { mp:null,url:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/media.mp4',container:'#mui-player-1',title:'window 1' },
-                    { mp:null,url:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/subtitleSource.mp4',container:'#mui-player-2',title:'window 2' },
-                    { mp:null,url:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/subtitleSource.mp4',container:'#mui-player-3',title:'window 3' },
-                    { mp:null,url:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/media.mp4',container:'#mui-player-4',title:'window 4' },
+                    { mp:null,url: globals.address.src_hd, container:'#mui-player-1', title:'window 1' },
+                    { mp:null,url: globals.address.src_subtitle, container:'#mui-player-2', title:'window 2' },
+                    { mp:null,url: globals.address.src_subtitle, container:'#mui-player-3', title:'window 3' },
+                    { mp:null,url: globals.address.src_hd, container:'#mui-player-4', title:'window 4' },
                 ]
             }
         },
@@ -54,7 +53,7 @@
         },
         beforeDestroy() {
             this.medias.forEach(media => {
-               media.mp.destory();
+               media.mp.destroy();
             })
         },
         methods:{

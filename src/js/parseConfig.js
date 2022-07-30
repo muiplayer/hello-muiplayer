@@ -5,6 +5,14 @@ import dashjs from 'dashjs'
 import globals from './global'
 
 var customKernelFun = function(video,src) {
+    let _destroy = (kernel) => {
+        setTimeout(() => {
+            globals.mp.on('error',function() {
+                kernel.destroy();
+            })
+        },500);
+    }
+
     // hls decode
     let hlsDecodeAction = () => {
         console.log('custom hls create...');
@@ -24,6 +32,9 @@ var customKernelFun = function(video,src) {
             // 发送错误报告
             globals.mp.sendError(errMes);
         });
+
+        // observe destroy
+        _destroy(hls)
     }
 
     // flv decode
@@ -42,6 +53,9 @@ var customKernelFun = function(video,src) {
             // 发送错误报告
             globals.mp.sendError(errMes);
         });
+
+        // observe destroy
+        _destroy(flv)
     }
 
     // dash decode
@@ -55,6 +69,9 @@ var customKernelFun = function(video,src) {
 
             dashMedia.reset();
         })
+
+        // observe destroy
+        _destroy(dashMedia)
     }
 
     // mp4 decode play

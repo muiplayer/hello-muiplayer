@@ -42,7 +42,7 @@ export function listener() {
     });
 
     // 视频销毁事件触发
-    globals.mp.on('destory',function() {
+    globals.mp.on('destroy',function() {
     })
 
     // 监听视频播放方向发生改变时触发

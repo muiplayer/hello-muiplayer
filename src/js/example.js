@@ -31,8 +31,8 @@ export function initExample() {
         globals.mp.openFullScreen();
     }
     
-    document.getElementById('mpDestory').onclick = () => {
-        globals.mp.destory();
+    document.getElementById('mpDestroy').onclick = () => {
+        globals.mp.destroy();
     }
     
     document.getElementById('mpGetControlsRemove').onclick = () => {

@@ -11,8 +11,6 @@
     import globals from '../../public/js/global'
     import { listener } from '../../public/js/playerListener'
 
-    console.log(config);
-
     import toggleUr from '../toggle-url'
     export default {
         components:{
@@ -20,8 +18,6 @@
         },
         data() {
             return {
-                loadType:'mp4',
-
                 playerConfig:{}, // 播放器配置
             }
         },
@@ -46,8 +42,7 @@
             listener();
         },
         beforeDestroy() {
-            console.log(globals.mp);
-            globals.mp.destory();
+            globals.mp.destroy();
         },
         methods:{
             onChangeurl(url) {

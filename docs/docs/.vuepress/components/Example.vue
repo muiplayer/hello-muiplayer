@@ -20,8 +20,6 @@
     export default {
         data() {
             return {
-                loadType:'mp4',
-
                 playerConfig:{}, // 播放器配置
             }
         },
@@ -46,7 +44,7 @@
             listener();
         },
         beforeDestroy() {
-            globals.mp.destory();
+            globals.mp.destroy();
         },
         methods:{
         }

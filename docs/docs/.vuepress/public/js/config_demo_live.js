@@ -3,7 +3,7 @@ import globals from '../../public/js/global'
 
 export default {
     container:'#mui-player',
-    src:'https://itv.olevod.tv:5443/live/cctv1hdbupt.m3u8',
+    src:'https://cctvwbndbd.a.bdydns.com/cctvwbnd/cctv1_2/index.m3u8?BR=single',
     title:'',
     autoplay:true,
     autoFit:true,
@@ -12,6 +12,16 @@ export default {
     themeColor:'rgb(62, 175, 124)',
     parse:{
         customKernel:function(video,src) {
+            let _destroy = (kernel) => {
+                globals.parseKernel = kernel;
+
+                setTimeout(() => {
+                    globals.mp.on('error',function() {
+                        kernel.destroy();
+                    })
+                },500);
+            }
+
             // hls decode
             let hlsDecodeAction = () => {
                 console.log('custom hls create...');
@@ -31,6 +41,9 @@ export default {
                     // 发送错误报告
                     globals.mp.sendError(errMes);
                 });
+
+                // observe destroy
+                _destroy(hls)
             }
 
             src.indexOf('.m3u8') != -1 ? hlsDecodeAction() : video.src = src;

@@ -1,3 +1,4 @@
+import MuiPlayerDesktopPlugin from 'mui-player-desktop-plugin'
 import customSetting from './customSetting'
 import parseConfig from './parseConfig'
 import globals from './global'

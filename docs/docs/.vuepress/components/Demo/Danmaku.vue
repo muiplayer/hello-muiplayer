@@ -14,7 +14,7 @@
 
         <toggle-url 
             @changeurl="cmSend" 
-            placeholder="Send a live danmaku" 
+            placeholder="Input danmaku content" 
             buttonText="Send Danmaku"
             type="text">
         </toggle-url>
@@ -34,7 +34,6 @@
         },
         data() {
             return {
-                loadType:'mp4',
                 playerConfig:{}, // 播放器配置
 
                 _disableTime:true,
@@ -82,7 +81,7 @@
             this.addPlayListener();
         },
         beforeDestroy() {
-            globals.mp.destory();
+            globals.mp.destroy();
         },
         destroyed() {
         },

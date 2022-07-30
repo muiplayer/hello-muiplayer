@@ -21,6 +21,6 @@ If you encounter problems during the development process, add the following cont
 
 If you have purchased related value added services, please let us know before describing the problem so that we know you need help：
 
-QQ：3131244726
+<font color="#3eaf7c" style="font-weight: bold;">QQ：3131244726</font>
 
 

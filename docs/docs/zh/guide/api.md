@@ -4,7 +4,9 @@ mui-player.js 创建了播放器基本使用的控件，包括定义在播放器
 
 为了让代码具有较好的模块分离，我们针对性的对移动端和PC端开发出一套适用的插件，开箱即用，在你阅读过这里时就可以选择使用这两类 **扩展插件** 了
 
-[mui-player-mobile.plugin.js](./mui-player-mobile-plugin/)
+[mui-player-desktop-plugin.js](./mui-player-desktop-plugin/)
+
+[mui-player-mobile.plugin.js](./plus-mobile-plugin/)
 
 :::
 
@@ -107,7 +109,7 @@ mp.on('ready',function(event) {
 | fullscreen-change | EventHandle | {direction,fullscreen} | 当视频进入或者退出全屏时触发。初始播放器器时默认触发一次该事件<br />direction：表示当前播放的方向，在手机端适用<br />fullscreen：表示当前在 pc 环境是否为全屏状态播放，只有在 pc 环境返回该属性<br/> |
 | controls-toggle   | EventHandle | {show}                 | controls 控件状态变化时触发                                  |
 | error             | EventHandle | native event           | 播放发生错误                                                 |
-| destory           | EventHandle |                        | 视频销毁事件                                                 |
+| destroy           | EventHandle |                        | 视频销毁事件                                                 |
 | ready             | EventHandle |                        | 播放器已创建完成                                             |
 
 
@@ -137,5 +139,5 @@ mp.showToast('提示...');
 | openFullScreen   | -                |      | 开启全屏播放                                                 |
 | closeFullScreen  | -                |      | 关闭全屏播放                                                 |
 | getControls      | -                |      | 获取所有播放器控件，返回一个数组                             |
-| destory          | -                | -    | 销毁视频播放器                                               |
+| destroy          | -                | -    | 销毁视频播放器                                               |
 | sendError        | event            |      | 主动发送错误报告                                             |

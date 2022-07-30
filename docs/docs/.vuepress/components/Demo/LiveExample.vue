@@ -2,7 +2,7 @@
     <main>
         <div id="mui-player"></div>
 
-        <toggle-url @changeurl="onChangeurl" placeholder="the support hls media"></toggle-url>
+        <toggle-url @changeurl="onChangeurl" placeholder="The input mp4 or mu38 video url"></toggle-url>
     </main>
 </template>
 
@@ -18,8 +18,6 @@
         },
         data() {
             return {
-                loadType:'mp4',
-
                 playerConfig:{}, // 播放器配置
             }
         },
@@ -44,7 +42,7 @@
             listener();
         },
         beforeDestroy() {
-            globals.mp.destory();
+            globals.parseKernel.destroy();
         },
         methods:{
             onChangeurl(url) {

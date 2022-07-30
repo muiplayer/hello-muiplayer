@@ -91,7 +91,7 @@
             this.loadAgreement();
         },
         beforeDestroy() {
-            globals.mp.destory();
+            globals.mp.destroy();
         },
         methods:{
             loadAgreement() {

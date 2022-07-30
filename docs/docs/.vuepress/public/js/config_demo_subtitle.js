@@ -1,6 +1,6 @@
 export default {
     container:'#mui-player',
-    src:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/subtitleSource.mp4',
+    src:'/media/subtitleSource.mp4',
     title:'',
     poster:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/subtitle_poster.jpg',
     autoplay:false,

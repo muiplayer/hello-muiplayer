@@ -27,7 +27,7 @@ module.exports = ctx => ({
 		['meta', { property: 'og:site_name', content: 'MuiPlayer' }],
         ['meta', { property: 'og:type', content: 'article' }],
         ['meta', { property: 'og:image', content: 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png' }],
-		['meta', { name: 'theme-color', content: '#1e98d4' }],
+		['meta', { name: 'theme-color', content: '#FFFFFF' }],
 		['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-X4RSEE27EY' }],
 		['script', {}, `
             window.dataLayer = window.dataLayer || [];
@@ -136,7 +136,8 @@ function sidebarGroupGuide(title) {
 				'begin',
 				'api',
 				'mui-player-desktop-plugin',
-				'mui-player-mobile-plugin',
+				// 'plus-desktop-plugin',
+				'plus-mobile-plugin',
 				'preset',
 				'thumbnails',
 				'barrage',

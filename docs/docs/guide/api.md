@@ -5,9 +5,9 @@ mui-player.js creates the basic controls used by the player, including the progr
 
 In order to make the code has good separation module, we targeted the mobile terminal and PC terminal to develop a suitable plug out of the box, when you read this you can choose to use these two types of **extensions** of the
 
-[mui-player-mobile.plugin.js](./mui-player-mobile-plugin/)
+[mui-player-desktop-plugin.js](./mui-player-desktop-plugin/)
 
-[mui-player-desktop.plugin.js](./mui-player-desktop-plugin/)
+[mui-player-mobile.plugin.js](./plus-mobile-plugin/)
 
 :::
 
