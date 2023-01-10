@@ -1,3 +1,4 @@
+import MuiPlayerMobilePlugin from '../../mui-player-mobile-plugin.min.js'
 import customSetting from './customSetting'
 import globals from '../js/global'
 
@@ -42,7 +43,16 @@ export default {
         typeof MuiPlayerDesktopPlugin != 'undefined' ? new MuiPlayerDesktopPlugin({
             customSetting:customSetting, // 自定义设置组菜单
             thumbnails:globals.thumbnails, // 缩略图配置
-            contextmenu:[],  // 自定义右键菜单
+            contextmenu:[ // 自定义右键菜单
+            ],  
+        }) : {},
+
+        typeof MuiPlayerMobilePlugin == 'function' ? new MuiPlayerMobilePlugin({
+            key:'01H01H01J01D01J01I01H01C01J01J01D01E01G01L01K',
+            defaultMenuConfig:{ 
+                showShare:[1,2,3,4,5,6],
+            },
+            thumbnails:globals.thumbnails, // 缩略图配置
         }) : {},
     ],
 }

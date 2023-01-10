@@ -54,8 +54,10 @@
     "vuepress-plugin-flowchart": "^1.4.2"
   },
   "dependencies": {
+    "axios": "^1.1.0",
     "dashjs": "^3.2.1",
     "flv.js": "^1.5.0",
-    "hls.js": "^0.14.17"
+    "hls.js": "^0.14.17",
+    "node-fetch": "^3.3.0"
   }
 }

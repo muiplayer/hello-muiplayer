@@ -42,6 +42,7 @@ module.exports = ctx => ({
 		['script', { src: `/js/mui-player-desktop-plugin.min.js` }],
 		['script', { src: `/js/CommentCoreLibrary.min.js` }],
 		['script', { src: `/js/swiper.min.js` }],
+		['script', { src: `/js/axios.min.js` }],
 	],
 	themeConfig: {
 		repo: 'muiplayer/hello-muiplayer',
@@ -136,7 +137,7 @@ function sidebarGroupGuide(title) {
 				'begin',
 				'api',
 				'mui-player-desktop-plugin',
-				// 'plus-desktop-plugin',
+				'plus-desktop-plugin',
 				'plus-mobile-plugin',
 				'preset',
 				'thumbnails',

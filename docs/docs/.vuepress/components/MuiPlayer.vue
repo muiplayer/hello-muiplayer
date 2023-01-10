@@ -20,7 +20,6 @@
                 </div>
             </div>
         </div>
-        
 
         <div class="begin-use theme-button" @click="beginUse">Begin Use →</div>
     </main>

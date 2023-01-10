@@ -2,7 +2,7 @@
 home: true
 heroImage: https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logo.png
 heroText: Mui Player
-tagline: 一款优秀的 HTML5 视频播放器框架
+tagline: 一款优秀的 HTML5 视频播放器组件
 sidebarDepth: 2
 features:
 - title: 多格式支持

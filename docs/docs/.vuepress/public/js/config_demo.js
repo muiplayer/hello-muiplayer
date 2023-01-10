@@ -1,3 +1,4 @@
+import MuiPlayerMobilePlugin from '../../mui-player-mobile-plugin.min.js'
 import globals from '../js/global'
 
 export default {
@@ -21,6 +22,14 @@ export default {
     ],
     plugins:[
         typeof MuiPlayerDesktopPlugin != 'undefined' ? new MuiPlayerDesktopPlugin({
+        }) : {},
+
+        typeof MuiPlayerMobilePlugin == 'function' ? new MuiPlayerMobilePlugin({
+            key:'01H01H01J01D01J01I01H01C01J01J01D01E01G01L01K',
+            defaultMenuConfig:{ 
+                showShare:[1,2,3,4,5,6],
+            },
+            thumbnails:globals.thumbnails, // 缩略图配置
         }) : {},
     ],
 }
