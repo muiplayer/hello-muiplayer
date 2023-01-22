@@ -1,11 +1,12 @@
 <template>
     <main id="toggleUrl">
-        <input v-model="text" class="url-input" name="url" type="text" :placeholder="placeholder">
-        <button class="url-submit" @click="onLoading">{{buttonText}}</button>
+        <input v-model="content" class="url-input" type="text" :placeholder="placeholder">
+        <button class="url-submit" @click="onLoading">{{ buttonText }}</button>
     </main>
 </template>
 
 <script>
+    import globals from '../public/js/global'
     export default {
         props:{
             placeholder:{
@@ -15,21 +16,30 @@
                 default:'Toggle URL'
             },
             type:{
-                default:'url', // url | text
+                default: 'url',
             }
         },
         data() {
             return {
-                text:'',
+                content:'',
             }
         },
         methods:{
             onLoading() {
+                // 地址
                 if(this.type == 'url') {
                     let reg = /http[s]{0,1}:\/\/([\w.]+\/?)\S*/;
-                    reg.test(this.text) ? this.$emit('changeurl',this.text) : alert('视频地址录入不正确！');
-                }else if(this.type == 'text') {
-                    this.$emit('changeurl',this.text)
+                    if(reg.test(this.content)) {
+                        this.$emit('before');
+                        globals.mp.reloadUrl(this.content);
+                    }else {
+                        alert('Please enter the correct address!');
+                    }
+                }
+
+                // 文本
+                if(this.type == 'text') {
+                    this.$emit('result', this.content);
                 }
             }
         }
@@ -38,7 +48,6 @@
 
 <style lang="less" scoped>
     #toggleUrl {
-        // border: 1px #f00 solid;
         height: 80px;
         line-height: 80px;
         .url-input {

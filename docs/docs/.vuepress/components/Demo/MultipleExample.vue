@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import config from '../../public/js/config_demo.js'
+    import config from '../../public/js/config.js'
     import globals from '../../public/js/global.js'
 
     export default {
@@ -18,8 +18,8 @@
             return {
                 medias:[
                     { mp:null,url: globals.address.src_hd, container:'#mui-player-1', title:'window 1' },
-                    { mp:null,url: globals.address.src_subtitle, container:'#mui-player-2', title:'window 2' },
-                    { mp:null,url: globals.address.src_subtitle, container:'#mui-player-3', title:'window 3' },
+                    { mp:null,url: globals.address.src_subtitle, container:'#mui-player-2', title:'window 2', poster:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/subtitle_poster.jpg' },
+                    { mp:null,url: globals.address.src_subtitle, container:'#mui-player-3', title:'window 3', poster:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/subtitle_poster.jpg' },
                     { mp:null,url: globals.address.src_hd, container:'#mui-player-4', title:'window 4' },
                 ]
             }
@@ -29,6 +29,8 @@
         mounted() {
             this.medias.forEach(media => {
                 let playerConfig = Object.assign({},config);
+                playerConfig['lang'] = this.$lang.indexOf('en') > -1 ? 'en' : 'zh-cn';
+
                 playerConfig['src'] = media.url;
                 playerConfig['title'] = media.title;
                 playerConfig['container'] = media.container,
@@ -39,14 +41,8 @@
                 playerConfig['autoFit'] = false;
                 playerConfig['width'] = '50%';
                 playerConfig['height'] = '225px';
-                delete playerConfig['plugins'];
-
-                if(this.$lang.indexOf('en') > -1) {
-                    playerConfig['lang'] = 'en';
-                }else if(this.$lang.indexOf('zh') > -1) {
-                    playerConfig['lang'] = 'zh-cn';
-                }
-
+                media['poster'] ? playerConfig['poster'] = media['poster'] : '';
+                
                 let muiplayer = new MuiPlayer(playerConfig);
                 media.mp = muiplayer;
             })

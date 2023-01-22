@@ -39,7 +39,6 @@ module.exports = ctx => ({
 		['script', { src: `/plugin/flv.min.js` }],
 		['script', { src: `/plugin/hls.min.js` }],
 		['script', { src: `/js/mui-player.min.js` }],
-		['script', { src: `/js/mui-player-desktop-plugin.min.js` }],
 		['script', { src: `/js/CommentCoreLibrary.min.js` }],
 		['script', { src: `/js/swiper.min.js` }],
 		['script', { src: `/js/axios.min.js` }],
@@ -116,9 +115,9 @@ function sidebarGroupDemo(title) {
 			sidebarDepth: 1,
 			children:[
 				'',
-				'live-demo',
 				'subtitle-demo',
 				'danmaku-demo',
+				'live-demo',
 				'multiple-demo',
 			]
 		}

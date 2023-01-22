@@ -8,6 +8,7 @@ mui-player-desktop-plugin.js 是播放器扩展插件，该扩展插件增强了
 
 :::
 
+<ClientOnly><Player-Desktop></Player-Desktop></ClientOnly>
 
 
 ## 安装

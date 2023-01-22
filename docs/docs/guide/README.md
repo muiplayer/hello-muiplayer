@@ -4,7 +4,7 @@
 
 MuiPlayer is an HTML5 video playback plug-in, which is configured with exquisite and operable playback controls by default, involving common playback scenarios, such as full-screen playback, playback fast forward, loop playback, volume adjustment, video decoding and other functions.
 
-<ClientOnly><Example></Example></ClientOnly>
+<ClientOnly><Player-Default></Player-Default></ClientOnly>
 
 The design of the player is compatible with running on PC and Mobile, and it provides two types of extension plug-ins, "mobile" and "PC", so you can also use this plug-in in the Webview of Android and Ios.
 

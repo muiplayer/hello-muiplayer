@@ -12,18 +12,15 @@
             </div>
         </div>
 
-        <toggle-url 
-            @changeurl="cmSend" 
-            placeholder="Input danmaku content" 
-            buttonText="Send Danmaku"
-            type="text">
-        </toggle-url>
+        <toggle-url @result="cmSend" placeholder="Input danmaku content" buttonText="Send Danmaku" type="text" />
     </main>
 </template>
 
 <script>
-    import config,{ customSettingFun } from '../../public/js/config_demo_danmaku.js'
+    import config from '../../public/js/config.js'
     import globals from '../../public/js/global'
+    import { customSettingFun } from '../../public/js/config_demo_danmaku.js'
+    
     import { listener } from '../../public/js/playerListener'
     import danmakuData from '../../public/js/comments'
 
@@ -46,13 +43,11 @@
         mounted() {
             this.initCreateDanmaku();
 
-            this.playerConfig = Object.assign({},config);
-            this.playerConfig['height'] = '420px';
+            this.playerConfig = Object.assign({}, config);
             let customSetting = new customSettingFun();
 
             if(this.$lang.indexOf('en') > -1) {
                 this.playerConfig['lang'] = 'en';
-                this.playerConfig['title'] = 'Your Title';
 
                 // Toggle Language EN Danmaku
                 customSetting[0].functions = 'Danmaku'
@@ -63,17 +58,8 @@
                 customSetting[0].childConfig[3].functions = 'Font size';
             }else if(this.$lang.indexOf('zh') > -1) {
                 this.playerConfig['lang'] = 'zh-cn';
-                this.playerConfig['title'] = '你的视频标题';
             }
 
-            this.playerConfig.plugins.push({
-                ...new MuiPlayerDesktopPlugin({
-                    customSetting:customSetting, // 自定义设置组菜单
-                    thumbnails:globals.thumbnails, // 缩略图配置
-                })
-            })
-
-            console.log(this.playerConfig);
             let muiplayer = new MuiPlayer(this.playerConfig);
             globals.mp = muiplayer;
 

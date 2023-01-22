@@ -8,4 +8,5 @@ dist
 package-lock.json
 .eslintrc.js
 .eslintignore
+mui-player-desktop-plugin.min.js
 mui-player-mobile-plugin.min.js

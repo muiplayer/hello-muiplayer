@@ -21,7 +21,7 @@ mui-player-mobile-plugin.js is an extend plugin for the player. The plug-in enha
 ## download
 
 ::: warning Value added services
-The plug-in is supported by the professional version. If you need to get the plug-in, please [click here](/joinUs/#professional-edition-plugin) to view the download and introduction of the professional version.
+The plug-in is supported by the professional version. If you need to get the plug-in, please [click here](/joinUs/#value-added-services) to view the download and introduction of the professional version.
 :::
 
 

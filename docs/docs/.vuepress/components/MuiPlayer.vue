@@ -29,9 +29,9 @@
     import config from '../public/js/config.js'
     import globals from '../public/js/global'
     import { listener } from '../public/js/playerListener'
+    import { pluginDesktop, pluginMobile } from '../public/js/plugins'
     
     import Agreement from './Agreement.vue'
-    
     export default {
         components: {
             Agreement
@@ -48,18 +48,20 @@
         created() {
         },
         mounted() {
-            this.playerConfig = Object.assign({},config);
+             var assginPlugins = {
+                plugins:[
+                    ...pluginDesktop.plugins,
+                    ...pluginMobile.plugins
+                ]
+            }
+            this.playerConfig = Object.assign(assginPlugins, config);
+
+            this.playerConfig['themeColor'] = '#1e98d4';
             this.playerConfig['objectFit'] = 'cover';
             this.playerConfig['autoFit'] = false;
             this.playerConfig['width'] = '63.6%';
             this.playerConfig['height'] = '70%';
-            if(this.$lang.indexOf('en') > -1) {
-                this.playerConfig['lang'] = 'en';
-                this.playerConfig['title'] = 'Your Title';
-            }else if(this.$lang.indexOf('zh') > -1) {
-                this.playerConfig['lang'] = 'zh-cn';
-                this.playerConfig['title'] = '你的视频标题';
-            }
+            this.playerConfig['lang'] = this.$lang.indexOf('en') > -1 ? 'en' : 'zh-cn';
 
             let muiplayer = new MuiPlayer(this.playerConfig);
             globals.mp = muiplayer;
@@ -105,9 +107,6 @@
             },
             beginUse() {
                 this.$router.push('guide');
-            },
-            showLoading() {
-                globals.mp.showLoading();
             },
             onLoadType(type) {
                 if(this.loadType != type) {

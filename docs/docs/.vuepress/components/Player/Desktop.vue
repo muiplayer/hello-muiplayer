@@ -13,9 +13,10 @@
 </template>
 
 <script>
-    import config from '../public/js/config.js'
-    import globals from '../public/js/global'
-    import { listener } from '../public/js/playerListener'
+    import config from '../../public/js/config.js'
+    import globals from '../../public/js/global'
+    import { listener } from '../../public/js/playerListener'
+    import { pluginDesktop } from '../../public/js/plugins'
 
     export default {
         data() {
@@ -26,17 +27,9 @@
         created() {
         },
         mounted() {
-            this.playerConfig = Object.assign({},config);
-            this.playerConfig['objectFit'] = 'contain';
-            this.playerConfig['height'] = '420px';
-            this.playerConfig['themeColor'] = 'rgb(62, 175, 124)';
-            if(this.$lang.indexOf('en') > -1) {
-                this.playerConfig['lang'] = 'en';
-                this.playerConfig['title'] = 'Your Title';
-            }else if(this.$lang.indexOf('zh') > -1) {
-                this.playerConfig['lang'] = 'zh-cn';
-                this.playerConfig['title'] = '你的视频标题';
-            }
+            this.playerConfig = Object.assign(pluginDesktop, config);
+            
+            this.playerConfig['lang'] = this.$lang.indexOf('en') > -1 ? 'en' : 'zh-cn';
 
             let muiplayer = new MuiPlayer(this.playerConfig);
             globals.mp = muiplayer;

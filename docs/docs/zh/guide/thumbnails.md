@@ -20,24 +20,47 @@
 ffmpeg -i video.mp4 -vsync vfr -vf "select=isnan(prev_selected_t)+gte(t-prev_selected_t\,1),scale=160:90,tile=10x10" -qscale:v 3 "output%03d.jpg"
 ```
 
-| 属性名             | 类型   | 默认值   | 说明                                                         |
-| ------------------ | ------ | -------- | ------------------------------------------------------------ |
-| thumbnails         | Object | {}       |                                                              |
-| thumbnails.preview | Array  | []       | 缩略图配置列表，接受可由多张按照顺序排列的缩略图片的资源地址 |
-| thumbnails.tile    | Array  | [10,10]  | 指定缩略图排列规则                                           |
-| thumbnails.scale   | Array  | [160,90] | 指定视频缩略片段图的尺寸<br/>默认值：[160,90] ，表示 width = 160px，height = 90px; |
+| 属性名             | 类型     | 默认值            | 说明                                                         |
+| ------------------ | -------- | ----------------- | ------------------------------------------------------------ |
+| thumbnails         | Object   | {}                |                                                              |
+| thumbnails.preview | Array    | []                | 缩略图配置列表，接受可由多张按照顺序排列的缩略图片的资源地址 |
+| thumbnails.tile    | Array    | [10,10]           | 指定缩略图排列规则                                           |
+| thumbnails.scale   | Array    | [160,90]          | 指定视频缩略片段图的尺寸<br/>默认值：[160,90] ，表示 width = 160px，height = 90px; |
+| thumbnails.async   | Function | ({ client, put }) | 异步返回缩略图路径，当缩略图需要在视频加载之后网络请求图片地址时使用，并在函数回调中返回`client`用于建立数据接收，以及`put`缩略图路径 `新增` |
 
 
 
 ### 使用缩略图
 
-MuiPlayer 并不限制缩略图具有指定的规格大小，但是你需要给定缩略图的规范，scale 参数指定宽高比，tile 参数指定缩略图碎片的排列规则。
+MuiPlayer 并不限制缩略图具有指定的规格大小，但是你需要给定缩略图的规范，scale 参数指定宽高比，tile 参数指定缩略图碎片的排列规则：
 
 ```javascript
-let thumbnails = {
+var remoteImages = ['./image/thumbnail003.jpg', './image/thumbnail004.jpg']; // 测试的远程路径
+var addThumbnailRecord = []; // 添加请求记录标记，防止重复
+var thumbnails = {
     preview:['./image/thumbnail001.jpg','./image/thumbnail002.jpg'], // 缩略图配置地址
     tile:[10,10], // 缩略图排列规则
     scale:[160,90], // 缩略片段图宽高比 
+    async:function(call) {
+        let { client, put } = call;
+        // 在这里建立 receive 接收函数，获取当前正在预览缩略图时鼠标寻址到指定的时间(秒) 和 preview index，并通过回调函数返回数据；
+        client.receive = (data) => {
+            let { time, thumbnail_image_index: thumbnailInex } = data;
+            if(!addThumbnailRecord.includes(thumbnailInex)) {
+                addThumbnailRecord.push(thumbnailInex);
+
+                // 延时模拟网络异步请求缩略图路径
+                setTimeout(() => {
+                    put([
+                        // index：缩略图队列顺序，src：缩略图路径
+                        { index: thumbnailInex, src: remoteImages[thumbnailInex]},
+                    ]);
+                }, 300);
+            }else {
+                // Thumbnail position index ${ thumbnailInex } has complete request
+            }
+        }
+    }
 }
 
 var mp = new MuiPlayer({

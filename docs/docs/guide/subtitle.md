@@ -10,6 +10,10 @@ View [webvtt supported](https://caniuse.com/?search=webvtt). From [here](https:/
 
 :::
 
+
+<ClientOnly><Demo-SubtitleExample></Demo-SubtitleExample></ClientOnly>
+
+
 ### API
 
 | Attribute name | Types of | Defaults  | Description                                                  |

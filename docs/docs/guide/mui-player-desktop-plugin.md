@@ -8,6 +8,9 @@ mui-player-desktop-plugin.js is a player extension plug-in. The extension plug-i
 
 :::
 
+<ClientOnly><Player-Desktop></Player-Desktop></ClientOnly>
+
+
 ## installation
 
 Install using npm:
