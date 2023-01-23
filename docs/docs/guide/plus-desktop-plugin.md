@@ -4,7 +4,7 @@
 
 PC side extension component, this extension adds more functional support for the player on the desktop side, including barrage input, ad floating window, video watermark, small window playback, progress point cue points, and video screenshots, etc.
 
-The plugin is written using native Js, so there is no redundancy in the code when writing the functional interface, which leads to an increase in the size of the package. Extension plug-ins are usually kept at the latest version, please update the main file of mui-player to the latest version before using this plugin.
+The plugin is written using native Js, so there is no redundancy in the code when writing the functional interface, which leads to an increase in the size of the package. Extension plugins are usually kept at the latest version, please update the main file of mui-player to the latest version before using this plugin.
 
 :::
 
@@ -21,11 +21,11 @@ This plugin is supported by the professional version, if you want to get the plu
 
 ## start using
 
-Introduce **mui-player-desktop-plugin.plus.js** on the page , the plugin needs to be loaded before initializing the player:
+Introduce **mui-player-desktop-plugin.js** on the page , the plugin needs to be loaded before initializing the player:
 
 ```html
-<!-- Introducing Pro Extensions Using Tags -->
-<script type="text/javascript" src="js/mui-player-desktop-plugin.plus.min.js"></script>
+<!-- Introducing the "Pro" extension using tags -->
+<script type="text/javascript" src="js/mui-player-desktop-plugin.min.js"></script>
 ```
 
 Pass in the main configuration item plugins:

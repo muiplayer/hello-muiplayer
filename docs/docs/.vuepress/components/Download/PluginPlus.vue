@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="show-entry" @click="dialogShow = true">下载</div>
+        <div class="show-entry" @click="showDialog">下载</div>
 
         <div class="download-dialog" v-if="dialogShow">
             <div class="dialog-cover"></div>
@@ -47,7 +47,7 @@
 
 <script>
     export default {
-        name: '',
+        props: ['name'],
         data() {
             return {
                 dialogShow: false,
@@ -61,6 +61,13 @@
             }
         },
         methods:{
+            showDialog(e) {
+                var downloadName = e.currentTarget.parentElement.parentElement.parentElement.firstChild.innerText;
+                console.log(downloadName.indexOf('PC'));
+                this.form.pluginType = downloadName.indexOf('PC') != -1 ? 'desktop' : 'mobile';
+
+                this.dialogShow = true;
+            },
             downloadPlus() {
                 let { pluginType, orderSign } = this.form;
 
@@ -113,7 +120,7 @@
                         window.open('https://item.taobao.com/item.htm?spm=a21dvs.23580594.0.0.1d293d0du4icIt&ft=t&id=679428385384');
                         break;
                     case 'desktop':
-                        
+                        window.open('https://item.taobao.com/item.htm?spm=a21dvs.23580594.0.0.1d293d0dwdj0PY&ft=t&id=698015661316');
                         break;
                 
                     default:

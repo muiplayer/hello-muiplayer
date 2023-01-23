@@ -30,15 +30,18 @@
         created() {
         },
         mounted() {
+            const TIP_SCREENSHOT = this.$lang.indexOf('en') > -1 ? 'Screenshot' : '截图';
+
             this.initCreateDanmaku();
 
             this.playerConfig = Object.assign(pluginDesktopPlus, config);
+
             this.playerConfig['lang'] = this.$lang.indexOf('en') > -1 ? 'en' : 'zh-cn';
             this.playerConfig.custom['footerControls'] = [
                 {
                     slot: 'screenshot',
                     position:'right',
-                    tooltip:'截图',
+                    tooltip:`${ TIP_SCREENSHOT }`,
                     oftenShow:false,
                     style: { },
                     click:function(e) {
@@ -46,13 +49,13 @@
                             type: 'image/png',
                             scale:0.5,
                             watermark: {
-                                image: 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logot.png',
-                                scale: 0.75,
+                                image: 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logot_hump.png',
+                                scale: 0.3,
                                 position:'top-right',
                             },
                             onDone:function(data) {
                                 let { base64, currentTime, download } = data;
-                                download(`截图${ new Date().toLocaleString() }`);
+                                download(`${ TIP_SCREENSHOT } ${ new Date().toLocaleString() }`);
                             },
                             onFail:function(error) {
                                 console.error(error);
@@ -128,7 +131,12 @@
             },
             // 创建一个窗口轮询滚动的内容提示
             _createRolling() {
-                var content = '<strong style="font-family: 楷体"><font color="#ff0000" size="4">播放</font><font color="#FFA700" size="4">&emsp;专注</font><font color="#6495ED" size="4">&emsp;连接</font><font size="4">&emsp;分享和自由 🚩</font></strong>';
+                var content_zn = '<strong style="font-family: 楷体"><font color="#ff0000" size="4">播放</font><font color="#FFA700" size="4">&emsp;专注</font><font color="#6495ED" size="4">&emsp;连接</font><font size="4">&emsp;分享和自由 🚩</font></strong>';
+
+                var content_en = '<strong style="font-family: 楷体"><font color="#ff0000" size="4">Play</font><font color="#FFA700" size="4">&emsp;Focus</font><font color="#6495ED" size="4">&emsp;Connection</font><font size="4">&emsp;Share and free 🚩</font></strong>';
+
+                var content = this.$lang.indexOf('en') > -1 ? content_en : content_zn;
+
                 this.rolling = new globals.mp.createRolling(content ,{
                     id: 'warning',
                     scrollamount:6,
@@ -179,8 +187,8 @@
             // 添加窗口播放水印
             _addWatermark() {
                 globals.mp.addWatermark({
-                    image: 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logot.png',
-                    scale: 0.5,
+                    image: 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/logot_hump.png',
+                    scale: 0.3,
                     position:'top-right',
                 });
             },
@@ -189,7 +197,7 @@
                 var createAd = () => {
                     // 动态创建弹出广告悬浮窗的内容
                     var vnode = document.createElement('img');
-                    vnode.src = 'http://192.168.1.10:8083/cover-square.jpg';
+                    vnode.src = 'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/cover-square.jpg';
                     vnode.style = 'object-fit: contain;height: 100%;width: 100%;';
                     vnode.setAttribute('title', 'Website');
                     vnode.onclick = (e) => {

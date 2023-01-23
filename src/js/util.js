@@ -41,7 +41,7 @@ export function onToggleVideo(data,selected) {
             paused:_video.paused
         });
 
-        selectIndex == 0 ? globals.mp.reloadUrl('https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/media_sd.mp4') : globals.mp.reloadUrl('https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/media.mp4');
+        selectIndex == 0 ? globals.mp.reloadUrl('https://muiplayer.js.org/media/media_sd.mp4') : globals.mp.reloadUrl('https://muiplayer.js.org/media/media.mp4');
 	}else {
 		globals.mp.showToast('没用可用的视频源');
 	}

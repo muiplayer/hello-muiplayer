@@ -25,11 +25,11 @@ PC 端扩展组件，该扩展新增了播放器在桌面端更多的功能性�
 ## 开始使用
 
 
-在页面引入 **mui-player-desktop-plugin.plus.js**，插件需要在初始化播放器之前加载：
+在页面引入 **mui-player-desktop-plugin.js**，插件需要在初始化播放器之前加载：
 
 ```html
-<!-- 使用标签引入专业版扩展组件 -->
-<script type="text/javascript" src="js/mui-player-desktop-plugin.plus.min.js"></script>
+<!-- 使用标签引入 “专业版” 扩展组件 -->
+<script type="text/javascript" src="js/mui-player-desktop-plugin.min.js"></script>
 ```
 
 在主配置项 plugins 中传入：

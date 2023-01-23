@@ -1,7 +1,7 @@
 var playerConfig = {
     container:'#mui-player',
-    title:'山景秀',
-    src:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/media/media.mp4',
+    title:'Your Title',
+    src:'https://muiplayer.js.org/media/media.mp4',
     poster:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/poster.jpg',
     videoAttribute:[
         {attrKey:'webkit-playsinline',attrValue:''},

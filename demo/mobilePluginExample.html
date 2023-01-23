@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>mui-player 移动端扩展插件示例</title>
+        <link rel="stylesheet" href="../release/mui-player/dist/mui-player.min.css">
+        <script src="./static/js/config.js"></script>
+        <script src="../release/mui-player/dist/mui-player.min.js"></script>
+        <script src="../release/mui-player-mobile-plugin/dist/mui-player-mobile-plugin.min.js"></script>
+    </head>
+    
+	<body>
+        <h3 style="text-align: center;">移动端扩展插件示例</h3>
+        <h4 id="_h5" style="color: red;display:none;text-align: center;">浏览器请切换在手机环境下运行demo</h4>
+        <div id="mui-player" style="max-width: 700px;margin: auto"></div>
+    </body>
+    
+    <script>
+        var config = window.playerConfig;
+        config.plugins = [
+            typeof MuiPlayerMobilePlugin == 'function' ? new MuiPlayerMobilePlugin({
+                key:'01C01F01D01F01H01J01E01F01K01D01J01K01D01D01G',
+                defaultMenuConfig:{
+                    showFillSwitch:true,
+                    showLoopSwitch:true,
+                    showSpeedSwitch:true,
+                    showShare:[1,2,3,4],
+                },
+                thumbnails:{ // 缩略图配置
+                    preview:['https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/output_160x90_10x10_001.jpg'],
+                    tile:[10,10],
+                    scale:[160,90],
+                },
+            }) : {},
+        ]
+
+        console.log(config);
+        var mp = new MuiPlayer(config);
+        
+        mp.on('volume-change',function(e) {
+            mp.video().volume = e.size;
+        });
+
+        // 监听分享事件
+        mp.on('share',function(e) {
+            alert(JSON.stringify(e));
+        });
+    </script>
+
+    <script>
+        // 允许平台判断IOS | Anndroid | Windows
+        function returnSys() {
+            var sys = "";
+            var browser = function() {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return { //移动终端浏览器版本信息
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                };
+            };
+            
+            var b = new browser();
+            if (b.iPhone || b.iPad || b.ios) {
+                sys = "ios"; 
+            }else if (b.android) { 
+                sys= "androd"; 
+            }else {
+                sys = 'window';
+            }
+            return sys;
+        }
+
+        if(returnSys() == 'window') {
+            document.getElementById('_h5').style.display = 'block';
+        }
+    </script>
+</html>

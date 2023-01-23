@@ -8,7 +8,7 @@ export default {
     container:'#mui-player',
     src:globals.address['src'],
     
-    title:'战狼',
+    title:'Your Title',
     autoplay:false, // 视频是否自动播放,默认为false，IOS H5环境无效
     preload:'auto', // 视频是否预加载,可选值 none、metadata、auto。如果 autoplay=true，则忽略该属性。
     loop:false, // 是否循环播放
