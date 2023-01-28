@@ -12,6 +12,8 @@ MuiPlayer 提供了一套样式统一，可观且响应式的移动端皮肤插�
 
 <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs" alt="MuiPlayer 移动端扩展插件预览图" />
 
+<ClientOnly><Player-Mobile></Player-Mobile></ClientOnly>
+
 :::
 
 
@@ -86,6 +88,8 @@ var mp = new MuiPlayer({
 | defaultMenuConfig.showShare       | Array   | []     | 默认主菜单配置显示分享的按钮，如果该数组的类型配置个数为零则不显示分享按钮，参数接受：[1,2,3,4,5,6]<br /><br /> 1：Wchat、2：Wchat Moments、3：QQ、4：Twitter、5：Facebook、6：Copy Link |
 | #                                 |         |        |                                                              |
 | thumbnails                        | Object  |        | 缩略图配置，[参考](./thumbnails/)                            |
+| #                                 |         |        |                                                              |
+| webpage                           | Boolean | false  | 在网页端应用插件 `新增`                                      |
 
 
 

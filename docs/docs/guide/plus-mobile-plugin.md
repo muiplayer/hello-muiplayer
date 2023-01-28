@@ -8,6 +8,8 @@ mui-player-mobile-plugin.js is an extend plugin for the player. The plug-in enha
 
 <img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/mobile_preview.png" class="zoom-custom-imgs" alt="MuiPlayer Mobile extend plugin"/>
 
+<ClientOnly><Player-Mobile></Player-Mobile></ClientOnly>
+
 :::
 
 ## Scan QR code
@@ -80,6 +82,8 @@ extend plugin configurable API:
 | defaultMenuConfig.showShare       | Array    | []       | Display the type of sharing. If the length of the value is zero or empty, the sharing portal will not be displayed. The parameter accepts 1 \| 2 \| 3 \| 4.  <br />1: WeChat, 2: Moments, 3: QQ, 4: Copy link |
 | #                                 |          |          |                                                              |
 | thumbnails                        | Object   |          | Thumbnail configuration，[reference](./thumbnails/)          |
+| #                                 |          |          |                                                              |
+| webpage                           | Boolean  | false    | Apply plugins on the web `new`                               |
 
 
 
