@@ -10,6 +10,6 @@
 
 如果您已相关购买增值服务，在描述问题前，请告知以便我们知道您需要帮助：
 
-<font color="#3eaf7c" style="font-weight: bold;">QQ：3131244726</font><img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/qqqrcode.jpg" title="QQ" style="display: block;"  />
+<font color="#3eaf7c" style="font-weight: bold;">QQ：3131244726</font><img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/wxcode.jpg" width="133px" title="QQ" style="display: block;"  />
 
 

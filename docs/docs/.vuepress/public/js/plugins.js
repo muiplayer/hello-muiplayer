@@ -7,7 +7,7 @@ import globals from './global'
 export const pluginDesktop = {
     plugins:[
         typeof MuiPlayerDesktopPlugin != 'undefined' ? new MuiPlayerDesktopPlugin({
-            key:'01J01J01E01D01K01I01L01C01C01F01H01D01L01C01D',
+            key:'01C01F01I01L01D01I01L01G01K01L01G01F01G01K01H',
             seekLine: false,
             customSetting:customSetting, // 自定义设置组菜单
             thumbnails:globals.thumbnails, // 缩略图配置
@@ -20,7 +20,7 @@ export const pluginDesktop = {
 export const pluginDesktopPlus = {
     plugins:[
         new MuiPlayerDesktopPlugin({
-            key:'01J01J01E01D01K01I01L01C01C01F01H01D01L01C01D',
+            key:'01C01F01I01L01D01I01L01G01K01L01G01F01G01K01H',
             customSetting:customSetting, // 自定义设置组菜单
             thumbnails:globals.thumbnails, // 缩略图配置
             seekLine: true, // 	显示寻址线
@@ -72,7 +72,7 @@ export const pluginDesktopPlus = {
 export const pluginMobile = {
     plugins:[
         typeof MuiPlayerMobilePlugin == 'function' ? new MuiPlayerMobilePlugin({
-            key:'01C01F01D01F01H01J01E01F01K01D01J01K01D01D01G',
+            key:'01J01C01I01F01K01D01H01C01K01C01H01K01G01C01F',
             defaultMenuConfig:{ 
                 showShare:[1,2,3,4,5,6],
             },

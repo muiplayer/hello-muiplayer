@@ -12,6 +12,9 @@ mui-player.js handles plus api by default, then the player runs on [H5+](http://
 
 To use in uni-app, you only need to use the [Webview](https://uniapp.dcloud.io/component/web-view) component in the framework. It is actually very simple to use, you only need to copy the downloaded mui-player.min.js and mui-player.min.css files to the hybrid folder of the corresponding project, and the webviw src is correspondingly linked to our HTML file.
 
+### Loading MuiPlayer in UniApp Renderjs (recommended)
+Using [Renderjs](http://localhost:8080/zh/guide/uni-app.html#%E5%9C%A8-uni-app-%E4%B8%AD%E4%BD%BF%E7%94%A8) technology to load js in the view layer to create a player is more convenient. For this purpose, there is no need to create a new HTML file and it can be used in the Vue component.
+
 
 
 ### Related HTML5 + API in the player application

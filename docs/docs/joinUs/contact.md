@@ -11,7 +11,7 @@ If you encounter problems during the development process, add the following cont
 If you have purchased related value added services, please let us know before describing the problem so that we know you need help：
 
 <font color="#3eaf7c" style="font-weight: bold;">QQ：3131244726</font>
-<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/qqqrcode.jpg" title="QQ" style="display: block;" />
+<img src="https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/wxcode.jpg" width="133px" title="WeChat" style="display: block;" />
 
 
 
