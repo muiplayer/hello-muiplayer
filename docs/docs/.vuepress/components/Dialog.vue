@@ -1,6 +1,6 @@
 <template>
 	<div class="dialog" v-if="show" @touchmove.prevent>
-		<div class="dialog-cover" @click="show = false"></div>
+		<div class="dialog-cover" @click="close"></div>
 		<div class="dialog-wrapper" :style="{ width: width }">
 			<slot></slot>
 		</div>
@@ -13,6 +13,10 @@
             width: {
                 type: String,
                 default: '38%'
+            },
+            autoClose: {
+                type: Boolean,
+                default: true
             }
         },
         data() {
@@ -23,8 +27,10 @@
         mounted() {
         },
         methods: {
-			close() {
-				this.show = false
+			close(actived) {
+                if(this.autoClose || actived === true) {
+                    this.show = false
+                }
 			},
 			open() {
 				this.show = true

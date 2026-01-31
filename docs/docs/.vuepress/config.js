@@ -42,6 +42,7 @@ module.exports = ctx => ({
 		['script', { src: `/js/CommentCoreLibrary.min.js` }],
 		['script', { src: `/js/swiper.min.js` }],
 		['script', { src: `/js/axios.min.js` }],
+		['script', { src: `/js/qrcode.min.js` }],
 	],
 	themeConfig: {
 		repo: 'muiplayer/hello-muiplayer',

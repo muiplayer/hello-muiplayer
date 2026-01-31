@@ -10,3 +10,5 @@ package-lock.json
 .eslintignore
 mui-player-desktop-plugin.min.js
 mui-player-mobile-plugin.min.js
+**/.vuepress/components/Payment/*.vue
+**/.vuepress/components/Price.vue
