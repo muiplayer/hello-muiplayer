@@ -119,11 +119,14 @@ export default {
           });
 
           const contentType = res.headers["content-type"] || "";
-          const disposition = res.headers["content-disposition"];
+          const filename = {
+            mobile: "mui-player-mobile-plugin @专业版.zip",
+            desktop: "mui-player-desktop-plugin @专业版.zip",
+          }[this.form.pluginType];
 
           if (contentType.includes("application/zip")) {
             setLoading("", "下载完成");
-            this.downloadBlob(res.data, disposition);
+            this.downloadBlob(res.data, filename);
           }
         } catch (err) {
           const text = await err.response.data.text();
@@ -137,14 +140,12 @@ export default {
 
       fetch();
     },
-    downloadBlob(data, disposition) {
+    downloadBlob(data, filename) {
       const blob = new Blob([data], {
         type: "application/zip",
       });
 
       const downURL = window.URL.createObjectURL(blob);
-      const filename = disposition.split("filename=")[1];
-
       const a = document.createElement("a");
       a.href = downURL;
       a.download = decodeURIComponent(filename);
